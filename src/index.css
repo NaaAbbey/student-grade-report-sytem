@@ -85,8 +85,22 @@
   margin-top: 130px;
 }
 
-.loginbck{
-  margin-top: 200px;
+.logo{
+  color: rgb(7, 3, 17);
+  font-size: 70px;
+  text-align: left;
+  margin-right: 20px;
+  padding-left: 0px;
+  position: fixed;
+  background-color: transparent;
+  top: 40px;
+}
+
+.welcome{
+  background-color: transparent;
+  color: rgb(76, 8, 236);
+  font-weight: bold;
+  font-size: 35px;
 }
 
 .name{
@@ -133,6 +147,7 @@
   border-radius: 10px;
   font-weight: bold;
   padding-bottom: 7%;
+  padding-top: 7%;
 }
 
 .login-button{
@@ -157,6 +172,7 @@
 
 .login a{
   background-color: transparent;
+  display: block;
 }
 .rememberpass{
   background-color: transparent;
@@ -168,7 +184,7 @@
   width: 120px;
   min-width: 90px;
   color: black;
-  display: inline;
+  display: inline-block;
   margin-right: 25%;
   
 }
