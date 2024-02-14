@@ -1,70 +1,122 @@
 @import url(https://cdn.linearicons.com/free/1.0.0/icon-font.min.css);
+@import url('https://fonts.googleapis.com/css2?family=Days+One&display=swap');
+:root{
+  --persian-blue: #0B3954;
+  --background: #DAD7D7;
+  --columbia: #BFD7EA;
+  --input-box: #E2E7E8;
+}
 
 *{
-  font-family: 'Times New Roman', Times, serif;
-  color: rgb(104, 103, 103);
-  background-color: snow;
+  font-family: 'Inter', Times, serif;
+  color: white;
+  background-color: var(--background);
+  ;
 }
 
 .App{
   width: 100%;
+  height: 100vh;
+  margin-top: 0px;
 }
-.navbar{
+
+.head{
+  border-bottom: solid;
+  border-width: 3px;
+  border-radius: 20px;
+  margin: 0px;
+  border-color: var(--persian-blue);
+  font-weight: bold;
+  height: 85px;
+  background-color: transparent;
+  
+}
+
+nav{
+  background-color: transparent;
+}
+
+.head.navbar{
   position: fixed;
   align-items: center;
   padding: 20px;
   display: flex;
   margin: 0 auto;
-  border-bottom: 2px  rgb(76, 8, 236);
-  top: 0px;
-  height: 70px;
+  bottom: 150px;
+  height: 85px;
   z-index: 100;
   justify-content: space-between;
   align-content: center;
-  width: 100%;
+  width: 100vw;
   font-weight: bold;
   left: 0;
 }
 
-.navbar h1{
-  color: rgb(76, 8, 236);
-  font-size: 70px;
+.navbar h1,
+.logo{
+  color: var(--persian-blue);
   text-align: left;
   margin-right: 20px;
   padding-left: 0px;
+  margin-top: 0px;
+  margin-left: 20px;
+  position: relative;
+  height: 40px;
+  bottom: 10px;
+  left: 10px;
+  font-family: 'Days one', "poppins";
+  top: -5px;
+  background-color: transparent;
+
+}
+
+.navbar h1:hover{
+  cursor: pointer;
 }
 
 .menu{
-  display: flex;
-  width: 60%;
-  height: 100%;
-  
-  align-items: center;
+  width: 880px;
+  align-items: right;
+  right: 0vw;
+  background-color: transparent;
+  position: relative;
 }
+
 .nav-links{
   display: flex;
-  margin-right: 5%;
-
+  margin-right: -3%;
+  margin-top: 10px;
+  background-color: transparent;
 }
+
 .nav-links a{
   margin-left:16px ;
   text-decoration: none;
   padding: 6px;
   font-size: 20px;
+  color: var(--persian-blue);
   width: 100%;
+  height: 100%;
+  top: 5%;
+  font-weight: bold;
+  background-color: transparent;
+  text-align: center;
+  align-items: baseline;
 }
 
 .navbar a:hover{
-  color: rgb(76, 8, 236);
+  color:rgb(31, 70, 107);
 }
 
 .li{
   display: flex;
+  background-color: transparent;
 }
 
-.lnr-menu{
-  font-size: 30px;
+.menu-persian{
+  width: 30px;
   cursor: pointer;
+  background-color: transparent;
 }
 
 .menu-icon{
@@ -72,38 +124,72 @@
   position: fixed;
   right:  40px;
   align-items: center;
-  top: 35px;
+  top: 25px;
+  background-color: transparent;
 }
 
-.menu-icon:hover .lnr-menu{
-  background-color: rgb(119, 70, 255);
-  padding: 7px;
-  border-radius: 50%;
+.show-menu{
+  background-color: transparent;
+}
+
+.landing-bck{
+  background-image: url("./images/landingpage-bck.jpg");
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
+  width: 100vw; 
+  height: 100vh;
+  position: fixed;
+}
+
+.slogan{
+  background-color: transparent;
+  width: 48vw;
+  height: 20vh;
+  display: inline-flex;
+  align-content: left;
+  position: relative;
+  left: 46%;
+  top: 0%;
+}
+
+.slogan h1{
+  color: var(--persian-blue);
+  font-family: "Days one";
+  background-color: transparent;
+  font-size: 60px;
+}
+
+.landing-character{
+  height: 65vh;
+  width: 50vw;
+  background-color: transparent;
+  display: inline-flex;
+  position: relative;
+  left: -45%;
+  top: 10%;
+}
+
+.start-button{
+  background-color: var(--persian-blue);
+  font-weight: bold;
+  border-radius: 20px;
+  border: none;
+  width: 30vw;
+  height: 60px;
+  position: relative;
+  left: 20%;
+  top: -5%;
+}
+
+.landing-bck a{
+  background-color: transparent;
 }
 
 .reportform{
   margin-top: 130px;
 }
 
-.logo{
-  color: rgb(7, 3, 17);
-  font-size: 70px;
-  text-align: left;
-  margin-right: 20px;
-  padding-left: 0px;
-  position: fixed;
-  background-color: transparent;
-  top: 40px;
-}
-
-.welcome{
-  background-color: transparent;
-  color: rgb(76, 8, 236);
-  font-weight: bold;
-  font-size: 35px;
-}
-
-.name{
+.name, .explain{
   margin-bottom: 20px;
   width: 100%;
   border-radius: 8px;
@@ -111,6 +197,8 @@
   margin-top: 10px;
   font-size: 15px;
   font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.466);
+  border: none;
 }
 
 .login{
@@ -126,35 +214,40 @@
   border-radius: 10px;
   z-index: 50;
   box-shadow: inset;
+  height: 60vh;
 }
 
+
 .loginBackground {
-  background-image: url('loginbck-1.jpg');
-  background-size: cover; 
-  background-position: center;
+  background-image: url("./images/login-bck.jpg");
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
   width: 100vw; 
   height: 100vh;
   position: fixed;
   top: 0;
-  opacity: 0.8;
+  opacity: 1;
   left: 0;
 }
 
 .login form{
-  background-color: rgb(176, 189, 243) ;
+  background-color: rgba(143, 199, 196, 0.425) ;
   width: 100%;
   padding: 15%;
   border-radius: 10px;
   font-weight: bold;
   padding-bottom: 7%;
   padding-top: 7%;
+  font-size: 17px;
+  color: rgba(7, 6, 6, 0.795);
+  box-shadow: -5px -5px 5px rgba(0, 0, 0, 0.3), 3px 3px 5px rgba(0, 0, 0, 0.3);
 }
 
-.login-button{
-  width: 120px;
+.login-button, .logout-button{
+  
   height: 38px;
-  color: snow;
-  background-color: rgb(76, 8, 236);
+  color: black;
+  background-color: rgba(248, 232, 221, 0.959);
   border-radius: 50px;
   border: none;
   font-weight: bold;
@@ -162,32 +255,55 @@
   transition: width 0.5s ease, height 0.5s ease, background-color 0.5s ease, color 0.5s ease;
 }
 
-.login-button:hover{
+.login-button{
+  width: 40%;
+}
+
+.logout-button{
+  width: 90%;
+  margin-top: 0px;
+}
+
+.login-button:hover, .logout-button:hover{
   cursor: pointer;
-  background-color: rgb(95, 37, 255);
-  width: 135px;
-  height: 43px;
-  color: black;
+  background-color: rgb(152, 170, 173);
+  height: 44px;
+  color: white;
+}
+
+.logout-button:hover{
+  width: 110%;
+}
+
+.login-button:hover{
+  width: 50%;
 }
 
 .login a{
   background-color: transparent;
   display: block;
 }
-.rememberpass{
+
+.rememberpass,
+.rememberme{
   background-color: transparent;
-  font-size: 15px;
+  font-size: 17px;
   font-weight: bold;
   cursor: pointer;
   padding-left: 0px;
   margin: 0px;
-  width: 120px;
+  width: 150px;
   min-width: 90px;
-  color: black;
+  color: rgba(7, 6, 6, 0.795);
   display: inline-block;
   margin-right: 25%;
-  
 }
+
+.rememberpass{
+  margin-right: 0px;
+  margin-left: 20%;
+}
+
 .checkbox{
   cursor: pointer;
 }
@@ -195,7 +311,8 @@
 .account,
 .sign-up{
   background-color: transparent;
-  color: black;
+  color: rgba(7, 6, 6, 0.795);
+  font-size: 18px;
 }
 
 .sign-up{
@@ -207,48 +324,179 @@
   text-decoration: underline;
 }
 
-@media screen and (max-width: 1100px){
+.report{
+  width: 100vw;
+  height: 100vh;
+  top: 75px;
+  position: fixed;
+  right: 8px;
+  
+}
+
+.report form{
+  box-shadow: -5px -5px 5px rgba(0, 0, 0, 0.3), 3px 3px 5px rgba(0, 0, 0, 0.3);
+  background-color: rgba(83, 115, 163, 0.322);
+  width: 50vw;
+  padding: 10%;
+  position: relative;
+  left: 15%;
+  margin-top: 90px;
+  border-radius: 30px;
+  padding-bottom: 4%;
+  top: 20vh;
+  height: 45vh;
+  padding-top: 4%;
+}
+
+.report .name, 
+.explain{
+  background-color: rgba(255, 255, 255, 0.644);
+}
+
+.explain{
+  height: 70px;
+}
+
+form{
+  color: black;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.submit{
+  height: 35px;
+  width: 40%;
+  border-radius: 50px;
+  cursor: pointer;
+  background-color: rgb(31, 70, 107);
+  color: white;
+  font-weight: bold;
+  border: none;
+  font-size: 15px;
+  transition: width 0.3s ease, height 0.3s ease;
+  margin-top: 20px;
+}
+
+.submit:hover{
+  width: 50%;
+  height: 40px;
+}
+
+@media screen and (max-width: 1200px){
+  .navbar h1{
+    top: -3px;
+  }
+
+  .nav-links{
+    margin-top: 0px;
+
+  }
+
+  .menu{
+    width: 68%;
+    right: 25px;
+  }
+
+  .landing-character{
+    left: -48%;
+  }
+}
+
+@media screen and (max-width: 1030px){
   nav{
     text-align: center;
   }
+
   .nav-links{
     position: fixed;
     display: block;
-    right: 100%;
-    top: 100px;
+    right: -100%;
+    top: 88px;
     height: 100%;
-    line-height: 300%;
-    background-color: rgb(56, 2, 180);
+    line-height: 350%;
+    background-color:rgb(31, 70, 107);
     padding: 0px;
     width: 100%;
-    max-width: 250px;
-    height: 50%;
+    max-width: 300px;
+    height: 100vh;
     min-height: 250px;
     margin-right: 0px;
+    border-top-left-radius: 25px;
+    z-index: 50;
+    transition: right 0.5s;
   }
 
-  .li, 
+  .li,
   .nav-links a{
-    background-color: inherit;
+    background-color: transparent;
+    margin-left: 0px;
+    border-radius: 5px;
   }
-  
+
+  .li{
+    position: relative;
+    top: 10px;
+    display: block;
+  }
+
+  .navbar h1{
+    top: 10px;
+  }
+ 
   .li:hover{
-    background-color:rgb(95, 37, 255);
+    background-color:rgba(104, 128, 163, 0.507);
     border-radius: 10px;
+    cursor: pointer;
   }
+
   .nav-links a{
     color: white;
+    transition: color 0.2s;
   }
 
   .nav-links a:hover{
-    color: black;
-  }
-  .menu-icon{
-    display: flex;
+    color: white;
   }
 
+  .menu-icon{
+    display: flex;
+    background-color: transparent;
+  }
+
+  .lnr-menu{
+    background-color: transparent;
+  }
   .menu #show-menu:checked ~ .nav-links{
     right: 0%;
+  }
+  
+  .slogan{
+    background-color: transparent;
+    width: 75vw;
+    height: 16vh;
+    display: flex;
+    align-content: center;
+    position: relative;
+    left: 15%;
+    top: 10px;
+  }
+  
+  .landing-character{
+    height: 55vh;
+    width: 85vw;
+    background-color: transparent;
+    position: relative;
+    left: 0;
+    top: 10%;
+  }
+
+  .start-button{
+    width: 45vw;
+    height: 60px;
+    position: relative;
+    top: 5%;
+    left: 0%;
+    margin-top: 40px;
   }
 
   .login{
@@ -256,7 +504,16 @@
     justify-content: space-between;
 
   }
+  
   .login form{
     padding: 20%;
+  }
+
+  .rememberpass{
+    margin-left: 0px;
+  }
+
+  .rememberme{
+    margin-right: 0px;
   }
 }

@@ -4,14 +4,14 @@ const Login = () => {
         <div className="loginBackground">
             <h1 className='logo'>GradeSOS</h1>
             <div className="login">
-                <form  >
+                <form >
                     <h2 className="welcome">Welcome!</h2>
-                    <input type="text" className="name"  placeholder="Student ID" /><br />
-                    <input type="password" className="name" placeholder="Pin"/><br />
+                    Student ID: <input type="text" className="name" /><br />
+                    Pin: <input type="password" className="name" /><br />
                     <input className="checkbox" type="checkbox" id="remember-me" />
-                    <label className="rememberpass" for="remember-me">Remember me</label>
+                    <label className="rememberme" for="remember-me">Remember me</label>
                     <p className="rememberpass">Forgot Password?</p>
-                    <Link to="/home"><button className="login-button" type="submit">Login</button></Link>
+                    <Link to="/dashboard"><button className="login-button" type="submit">Login</button></Link>
                     <p className="account">Don't have an account? <span className="sign-up">Sign up</span></p>
                 </form>
             </div>

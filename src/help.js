@@ -1,5 +1,5 @@
 import Navbar from "./Navbar";
-const Home = () => {
+const Help = () => {
     return ( 
         <div>
            <Navbar/> 
@@ -7,4 +7,4 @@ const Home = () => {
      );
 }
  
-export default Home;
+export default Help;
