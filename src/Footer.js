@@ -26,6 +26,15 @@ const Footer = () => {
                 <div className="line"></div>
                 <img className="send-icon" src={sendIcon} alt="send-icom" />
             </div>
+            <div className="socials">
+                <p>Follow us on:</p>
+                <div className="socials-icons">
+                    <img className="icon" src={xIcon} alt="x-icon" />
+                    <img className="icon" src={facebook} alt="facebook-icon" />
+                    <img className="icon" src={instagram} alt="instagram-icon" />
+                    <img className="icon" src={linkenIn} alt="linkendIn-icon" />
+                </div>
+            </div>
         </div>
      );
 }
