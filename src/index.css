@@ -10,7 +10,6 @@
 *{
   font-family: 'Inter', Times, serif;
   color: white;
-  background-color: var(--background);
   ;
 }
 
@@ -18,6 +17,7 @@
   width: 100%;
   height: 100vh;
   margin-top: 0px;
+  background-color: var(--background);
 }
 
 .head{
@@ -382,6 +382,115 @@ form{
   height: 40px;
 }
 
+.footer{
+  background-color: var(--persian-blue);
+  width: 100vw;
+  height: 160px;
+  position: fixed;
+  bottom: 0%;
+  
+}
+
+.location-icon, .mail-icon{
+  width: 30px;
+  position: relative;
+  top: 35px;
+  left: -40vw;
+  display: inline;
+}
+
+.locate{
+  width: 5vw;
+  display: inline;
+  position: relative;
+  top: -10px;
+  right: 8vw;
+}
+
+.location p{
+  margin-bottom: 0px;
+}
+.location, .mail-footer {
+  display: block;
+  position: relative;
+  width: 250px;
+  left: 12vw;
+}
+
+.school{
+  display: block;
+}
+
+.mail-icon{
+  top: 15px;
+  
+}
+
+.mail-footer{
+top: -15px;
+left: 11vw;
+  
+}
+
+.info-footer{
+  width: 50vw;
+  display: inline;
+  left: -70%;
+}
+
+.about, .cookies, 
+.terms, .policy{
+  display: inline;
+  margin-right: 10px;
+  position: relative;
+  top: -10vh;
+  left: vw;
+}
+
+.subscription{
+  width: 30vw;
+  position: relative;
+  left: 70vw;
+  top: -135px;
+}
+
+.subscribe{
+  font-weight: bold;
+  left: 1vw;
+  position: relative;
+  width: 300px;
+}
+
+.subscribe-sub{
+  position: relative;
+  width: 250px;
+  left: 1vw;
+  font-size: smaller;
+  top: 5px;
+}
+
+.line{
+  border-bottom: 1px solid white;
+  width: 23vw;
+  position: relative;
+  left: 2vw;
+  top: 18px;
+}
+
+.email{
+  font-size: x-small;
+  position: relative;
+  top: 17px;
+  left: -9vw;
+}
+
+.send-icon{
+  width: 20px;
+  position: relative;
+  left: 10vw;
+  top: -13px;
+}
+
 @media screen and (max-width: 1200px){
   .navbar h1{
     top: -3px;
@@ -515,5 +624,17 @@ form{
 
   .rememberme{
     margin-right: 0px;
+  }
+
+  .footer{
+    height: 50%;
+  }
+
+  .location-icon{
+    left: -125px;
+    top: 25px;
+  }
+  .location{
+    left: 35px;
   }
 }

@@ -1,4 +1,5 @@
 import Navbar from "./Navbar";
+import Footer from "./Footer";
 const ReportForm = () => {
     return (
         <div>
@@ -13,6 +14,7 @@ const ReportForm = () => {
                     <button className="submit" type="submit">Submit</button>
                 </form>
             </div>
+            <Footer/>
         </div>
      );
 }
