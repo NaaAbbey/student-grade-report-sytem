@@ -8,6 +8,7 @@ import Instructor from './instructor';
 import ReportForm from './reportform';
 import GradeReport from './gradereport';
 import Help from './help';
+import Logged from './logged-in';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Landing/>} />
             <Route path='/login' element={<Login/>}/>
+            <Route path='/logged-in' element={<Logged/>}/>
             <Route path='/dashboard' element={<Dashboard/>}/>
             <Route path='/gradereport' element={<GradeReport/>}/>
             <Route path='/reportform' element={<ReportForm/>}/>

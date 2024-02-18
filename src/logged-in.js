@@ -3,15 +3,15 @@ import landingImage from "./images/landing-image.png";
 import menuicon from "./icons/open-menu-6207.png";
 import closeicon from "./icons/close-x-10324.png"
 
-const Landing = () => {
+const Logged = () => {
     return ( 
         <div className="landing-bck">
             <input type="checkbox" id="show-menu" style={{display:"none"}}/>
             <div className='landing-header'>
-                <h3 className='logo'>GradeSOS</h3>
+                <h3>GradeSOS</h3>
                 <div className='help'>Help</div>
-                <Link to="/login" className='a'><div className='sign-in'>Sign in</div></Link>
-                <Link to="/logged-in" className='a'><button className='sign-up'>Sign up</button></Link>
+                <Link to="/dashboard" className='a'><div className='dashboard'>Dashboard</div></Link>
+                <Link to="/landingpage" className='a'><div className='logout'>Logout</div></Link>
             </div>
             <div className="menu-icon">
                 <label for="show-menu"><img className="menuIcon" src={menuicon} alt="menu icon" /></label>
@@ -28,4 +28,4 @@ const Landing = () => {
      );
 }
  
-export default Landing;
+export default Logged;

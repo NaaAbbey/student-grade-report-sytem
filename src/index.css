@@ -4,6 +4,7 @@
   --background: #0A0521;
   --input-box: #CDCDCD;
   --theme: #A589DD;
+  --other: #D6C5EF;
 }
 
 *{
@@ -19,6 +20,9 @@
   background-color: var(--background);
 }
 
+.a{
+  text-decoration: none;
+}
 .head{
   border-bottom: solid;
   border-width: 3px;
@@ -52,7 +56,7 @@ nav{
 }
 
 .navbar h1,
-.logo{
+{
   color: var(--persian-blue);
   text-align: left;
   margin-right: 20px;
@@ -124,17 +128,21 @@ nav{
 }
 
 .landing-header{
+  background-color: var(--background);
   display: flex;
   justify-content: space-between;
   align-content: center;
-  height: 50px;
+  height: 70px;
   padding-top: 10px ;
 }
 
-.landing-header h3{
+.logo{
   margin-left: 10px;
   padding-top: 5px;
+  font-weight: bold;
+  width: 150px;
 }
+
 
 .help{
   font-size: 16px;
@@ -159,6 +167,23 @@ nav{
   margin-right: 10px;
 }
 
+.dashboard, .logout{
+  padding: 12px;
+  position: relative;
+  
+}
+
+.dashboard{
+  left: -10vw;
+  width: 120px;
+}
+
+.logout{
+  width: 100px;
+  height: 48px;
+  margin-right: 10px;
+}
+
 .menu-icon{
   display: none;
 }
@@ -173,21 +198,24 @@ nav{
   top: 5%;
 }
 
+.landing-content{
+  top: 12vh;
+  position: relative;
+}
+
 .slogan{
   background-color: transparent;
   width: 80vw;
   height: 50px;
   display: inline-flex;
-  align-content: left;
   position: relative;
-  left: 15vw;
+  left: 13vw;
   top: 10%;
-  font-weight: bold;
 }
 
 .slogan h1{
   color: var(--persian-blue);
-  background-color: transparent;
+  font-weight: bold;
   
 }
 
@@ -197,22 +225,21 @@ nav{
 
 .motto{
   position: relative;
-  top: 12%;
-  left: vw;
+  top: 1vh;
+  left: 2vw;
 }
 
 .start-button, .contact-us{
-  font-weight: bold;
   border-radius: 14px;
   border: none;
   width: 200px;
   height: 45px;
   position: relative;
-  top: 15%;
+  top: 3vh;
 }
+
 .start-button{
   background-color: var(--theme);
-  
 }
 
 .contact-us{
@@ -224,57 +251,73 @@ nav{
   background-color: transparent;
 }
 
-.loginBackground {
-  background-image: url("./images/login-bck.jpg");
-  background-repeat: no-repeat;
-  background-size: 100vw 100vh;
-  width: 100vw; 
+.login-img{
+  position: relative;
+  background-color: var(--other);
+  width: 50vw;
   height: 100vh;
-  position: fixed;
-  top: 0;
-  opacity: 1;
-  left: 0;
+ 
+}
+
+.loginImg{
+  width: 30vw;
+  position: relative;
+  top: 38vh;
+  background-color: transparent;
+
 }
 
 .loginBackground h1{
   top: 10px;
 }
 
+.loginBackground .landing-header{
+  position: fixed;
+  z-index: 100;
+  width: 100vw;
+}
+
+.loginBackground{
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+}
+
 .name, .explain{
-  margin-bottom: 20px;
-  width: 50vw;
-  border-radius: 30px;
+  margin-bottom: 40px;
+  width: 40vw;
+  border-radius: 12px;
   height: 50px;
   font-size: 15px;
   font-weight: bold;
-  background-color: rgba(226,231,232, 0.6);
-  border: none;
+  background-color: transparent;
+  
 }
 
 .login{
-  background-color: transparent;
+  background-color: white;
   text-align: center;
-  width: 50%;
-  display: flex;
+  width: 50vw;
+  display: inline-flex;
   justify-content: center;
-  top: 20vh;
+  top: -100vh;
   position: relative;
-  left: 25%;
+  left: 25vw;
   align-items: center;
-  height: 60vh;
+  height: 100vh;
 }
 
 .login h1{
   color: var(--persian-blue);
   font-weight: bold;
-  margin-bottom: 40px;
+  margin-bottom: 120px;
 }
 
 .studentId, .pin{
   color: #2b2f2f;
   width: 100px;
   position: relative;
-  left: 2vw;
+  left: 5vw;
   font-weight: bold;
 }
 
@@ -283,10 +326,10 @@ nav{
 }
 
 .forgotpin{
-  left: 40%;
+  left: 30%;
   position: relative;
-  font-weight: lighta;
-  color: black;
+  font-weight: lighter;
+  color: var(--theme);
   margin-top: 10px;
 }
 
@@ -302,13 +345,10 @@ nav{
 .login-button{
   width: 40vw;
   height: 50px;
-  color: white;
-  background-color:  var(--persian-blue);
-  border-radius: 50px;
+  border-radius: 12px;
+  background-color: var(--theme);
   border: none;
-  font-weight: bold;
-  margin-top: 10px;
-  
+  margin-top: 30px;
 }
 
 .login-button:hover{
@@ -518,13 +558,9 @@ left: 11vw;
 
   }
 
-  .menu{
-    width: 68%;
-    right: 25px;
-  }
-
   .slogan{
     left: 5vw;
+    
   }
 
   .info-footer{
@@ -538,10 +574,9 @@ left: 11vw;
 }
 
 @media screen and (max-width: 1030px){
-  .help, .sign-in, .sign-up{
+  .help, .sign-in, .sign-up, .dashboard, .logout{
     display: none;
   }
-
   .menu-icon{
     display: flex;
     position: fixed;
@@ -549,20 +584,35 @@ left: 11vw;
     top: 15px;
   }
 
-  .menuIcon{
+  .menuIcon, .closeIcon{
     width: 30px;
+    cursor: pointer;
+  }
+  .menuIcon{
+    display: flex;
+  }
+  .closeIcon{
+    display: none;
+    width: 20px;
+
   }
 
   .landing-character{
     left: 20vw;
-    top: 2%;
+    top: 5%;
     width: 60vw;
+    z-index: 0;
+  }
+
+  .landing-content{
+    position: relative;
+    top: 12vh;
   }
 
   .slogan{
     background-color: transparent;
     width: 75vw;
-    height: 16vh;
+    height: 18vh;
     display: flex;
     align-content: center;
     position: relative;
@@ -572,18 +622,18 @@ left: 11vw;
 
   .motto{
     width: 65vw;
-    top: 6vh;
+    top: -5vh;
     left: 18%;
   }
 
   .start-button, .contact-us{
     width: 45vw;
     height: 50px;
-    position: relative;
-    top: 10%;
+    top: -3vh;
     left: 30%;
     display: block;
     margin-bottom: 2vh;
+    text-decoration: none;
   }
 
   nav{
@@ -642,8 +692,57 @@ left: 11vw;
   }
 
 
-  .menu #show-menu:checked ~ .nav-links{
-    right: 0%;
+  .landing-bck #show-menu:checked ~ .landing-header{
+    background-color: var(--theme);
+    height: 25vh;
+    display: block;
+    z-index: 100;
+    transition: all 0.3s ease-in-out;
+
+    
+    .help, .sign-in, .sign-up, .dashboard, .logout{
+      display: block;
+    }
+
+    .help{
+      width: 60px;
+      padding: 12px;
+      left: 12px;
+      height: 48px;
+      transition: all 0.5s;
+    }
+
+    .sign-in, .logout{
+      width: 100px;
+      left: 0px;
+      transition: all 0.5s;
+    }
+
+    .dashboard{
+      width: 120px;
+      left: 7px;
+      transition: all 0.5s;
+    }
+
+    .logout{
+      left: 4px;
+    }
+
+    .sign-up {
+      background-color: transparent;
+      border: none;
+      transition: all 0.5s;
+    }
+  }
+
+  .landing-bck #show-menu:checked ~ .menu-icon{
+    .closeIcon{
+      display: flex;
+    }
+
+    .menuIcon{
+      display: none;
+    }
   }
 
   .rememberpass{
@@ -722,4 +821,33 @@ left: 11vw;
     left: 41vw;
   }
 
+}
+
+@media screen and (max-width: 700px){
+  .landing-header {
+    display: none;
+  }
+
+  .login-img{
+    display: none;
+  }
+
+  .login{
+    top: 0;
+    width: 100vw;
+    left: 0;
+  }
+
+  .login .name, .login-button{
+    width: 80vw;
+    height: 60px;
+  }
+  
+  .studentId, .pin{
+    left: 10vw;
+  }
+
+  .forgotpin{
+    left: -30vw;
+  }
 }
