@@ -1,47 +1,54 @@
 import Navbar from "./Navbar";
-import Footer from "./Footer";
-const Instructor = () => {
-    return ( 
-        <div>
-           <Navbar/> 
-           <div>
-               <div className="instructor">          
-                     PAUL NII TACKIE AMMAH
-                     <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#contact" aria-expanded="true" aria-controls="contact">Contact Instructor</button>
-               </div>
-               <div class="collapse" id="contact">
-                  <div class="card card-body">
-                     Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
-                  </div>
-               </div>
-           </div>
 
-            <div className="instructor">
-               MICHEAL SOLI TETTEH
-               <button className="contact" type="submit">Contact Instructor</button>
+const Instructor = () => {
+   return ( 
+      <div>
+         <Navbar/> 
+         <div className="body">
+            <div className="left">
+               <div className="page-title"> <h3>Contacts</h3></div>
+               <p className="level">Level 100</p>
+               <div className="instructor"> 
+                  <p className="initials">PA</p>
+                  <p className="instructor-name"> Paul Nii Takie Ammah</p>
+                  <p className="course">Programming</p>
+               </div>
+               <div className="instructor"> 
+                  <p className="initials">PA</p>
+                  <p className="instructor-name"> Paul Nii Takie Ammah</p>
+                  <p className="course">Programming</p>
+               </div>
+               <div className="instructor"> 
+                  <p className="initials">PA</p>
+                  <p className="instructor-name"> Paul Nii Takie Ammah</p>
+                  <p className="course">Programming</p>
+               </div>
+               <div className="instructor"> 
+                  <p className="initials">PA</p>
+                  <p className="instructor-name"> Paul Nii Takie Ammah</p>
+                  <p className="course">Programming</p>
+               </div>
+               <div className="instructor"> 
+                  <p className="initials">PA</p>
+                  <p className="instructor-name"> Paul Nii Takie Ammah</p>
+                  <p className="course">Programming</p>
+               </div>
             </div>
-            <div className="instructor">
-               APIETU FERDINAND KATSRIKU
-               <button className="contact" type="submit">Contact Instructor</button>
+            <div className="right">
+               <div className="lecturer"> <h3>Paul Nii Takie Ammah</h3></div>
+               <p className="level">Programming</p>
+               <div className="subject">
+                  <p>Subject of message</p>
+                  <input className="input-box" type="text" />
+               </div>               <div className="subject">
+                  <p>Compose message</p>
+                  <input className="compose-box" type="text" />
+               </div>
+               <button className="submit-button" type="submit">Submit</button>
             </div>
-            <div className="instructor">
-               ABDULLAI DWUMFOUR AZIZ
-               <button className="contact" type="submit">Contact Instructor</button>
-            </div>
-            <div className="instructor">
-               PAUL NII TACKIE AMMAH
-               <button className="contact" type="submit">Contact</button>
-            </div>
-            <div className="instructor">
-               PAUL NII TACKIE AMMAH
-               <button className="contact" type="submit">Contact </button>
-            </div>
-            <div className="instructor">
-               PAUL NII TACKIE AMMAH
-               <button className="contact" type="submit">Contact</button>
-            </div>
-        </div>
-     );
+         </div>
+      </div>
+   );
 }
  
 export default Instructor;

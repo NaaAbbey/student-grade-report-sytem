@@ -10,7 +10,7 @@ const Login = () => {
                 <Link to="/logged-in" className='a'><button className='sign-up'>Sign up</button></Link>
             </div>
             <div className='login-img'>
-                <img className='loginImg' src={loginImg} alt="login image" />
+                <img className='loginImg' src={loginImg} alt="login"/>
             </div>
             <div className="login">
                 <form >

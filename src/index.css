@@ -5,12 +5,12 @@
   --input-box: #CDCDCD;
   --theme: #A589DD;
   --other: #D6C5EF;
+  --page: #0F0929;
 }
 
 *{
   font-family: "work sans", 'Inter', Times, serif;
   color: white;
-  ;
 }
 
 .App{
@@ -23,101 +23,16 @@
 .a{
   text-decoration: none;
 }
+
 .head{
   border-bottom: solid;
-  border-width: 3px;
-  border-radius: 20px;
+  border-width: 1px;
   margin: 0px;
-  border-color: var(--persian-blue);
+  border-color: var(--theme);
   font-weight: bold;
   height: 85px;
   background-color: transparent;
   
-}
-
-nav{
-  background-color: transparent;
-}
-
-.head.navbar{
-  position: fixed;
-  align-items: center;
-  padding: 20px;
-  display: flex;
-  margin: 0 auto;
-  bottom: 150px;
-  height: 85px;
-  z-index: 100;
-  justify-content: space-between;
-  align-content: center;
-  width: 100vw;
-  font-weight: bold;
-  left: 0;
-}
-
-.navbar h1,
-{
-  color: var(--persian-blue);
-  text-align: left;
-  margin-right: 20px;
-  padding-left: 0px;
-  margin-top: 0px;
-  margin-left: 20px;
-  position: relative;
-  height: 40px;
-  bottom: 10px;
-  left: 10px;
-  font-family: 'Days one', "poppins";
-  top: -5px;
-  background-color: transparent;
-
-}
-
-.navbar h1:hover{
-  cursor: pointer;
-}
-
-.menu{
-  width: 880px;
-  align-items: right;
-  right: 0vw;
-  background-color: transparent;
-  position: relative;
-}
-
-.nav-links{
-  display: flex;
-  margin-right: -3%;
-  margin-top: 10px;
-  background-color: transparent;
-}
-
-.nav-links a{
-  margin-left:16px ;
-  text-decoration: none;
-  padding: 6px;
-  font-size: 20px;
-  color: var(--persian-blue);
-  width: 100%;
-  height: 100%;
-  top: 5%;
-  font-weight: bold;
-  background-color: transparent;
-  text-align: center;
-  align-items: baseline;
-}
-
-.navbar a:hover{
-  color:rgb(31, 70, 107);
-}
-
-.li{
-  display: flex;
-  background-color: transparent;
-}
-
-.show-menu{
-  background-color: transparent;
 }
 
 .landing-bck{
@@ -247,6 +162,7 @@ nav{
   color: var(--theme);
   left: 5%;
 }
+
 .landing-bck a{
   background-color: transparent;
 }
@@ -283,15 +199,14 @@ nav{
   position: fixed;
 }
 
-.name, .explain{
+.name, .explain, .input-box, .compose-box{
   margin-bottom: 40px;
   width: 40vw;
   border-radius: 12px;
-  height: 50px;
+  height: 55px;
   font-size: 15px;
   font-weight: bold;
   background-color: transparent;
-  
 }
 
 .login{
@@ -342,9 +257,9 @@ nav{
   padding: 0px;
 }
 
-.login-button{
+.login-button, .submit-button{
   width: 40vw;
-  height: 50px;
+  height: 55px;
   border-radius: 12px;
   background-color: var(--theme);
   border: none;
@@ -352,24 +267,171 @@ nav{
 }
 
 .login-button:hover{
-  transition: width 0.3s ease, height 0.3s ease, background-color 0.5s ease, color 0.3s ease;
+  transition: width 0.3s ease-in-out, height 0.3s ease-in-out, background-color 0.5s ease-in-out, color 0.3s ease-in-out;
   cursor: pointer;
-  background-color: rgb(25, 53, 95);
+  background-color: var(--other);
   width: 43vw;
-  height: 55px;
+  height: 57px;
+}
+
+nav{
+  position: fixed;
+  align-items: center;
+  display: flex;
+  margin: 0 auto;
+  height: 85px;
+  width: 100vw;
+  font-weight: bold;
+  background-color: var(--background);
+  z-index: 50;
+  border-bottom: solid;
+  border-width: 1px;
+  margin: 0px;
+  border-color: var(--theme);
+}
+
+.account, .help-logo{
+  width: 40px;
+  height: 40px;
+  background-color: var(--theme);
+  right: 20px;
+  position: relative;
+  border-radius: 50%;
+}
+
+.help-logo{
+  left: 35%;
+}
+
+.account p, .help-logo p{
+  margin-top: 22%;
+  margin-bottom: 0;
+}
+
+
+.head .menu{
+  width: 18vw;
+  height: 100vh;
+  position: fixed;
+  top: 0vh;
+  z-index: 100;
+}
+
+.sidebar{
+  width: 230px;
+  height: 100vh;
+  background-color: var(--page);
+  border-right: solid;
+  border-width: 1px;
+  border-color: var(--theme);
+  color: white;
+}
+
+.logo{
+  position: relative;
+  top: 20px;
+}
+
+.navbar .logo{
+  top: 0px;
+}
+
+.sidebar a{
+  color: white;
+  position: relative;
+   position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  padding-top: 12px;
+}
+
+.li, .logout{
+  position: relative;
+  left: 5%;
+  display: flex;
+  color: white;
+  top: 27vh;
+  left: 10%;
+  width: 185px;
+  height: 45px;
+  margin-top: 10px;
+}
+
+.logout{
+  top: 55vh;
+  padding: 0px;
+}
+ 
+.a:hover, a.active{
+  color: var(--background);
+  background-color: var(--other);
+}
+
+a.active svg path, .a:hover svg path, .logout-icon{
+  fill: var(--background);
+}
+
+.sidebar-icon-white, .logout-icon{
+  position: relative;
+  top: -7%;
+  left: -7%;
+}
+
+.body{
+  position: relative;
+  margin-left: 18vw;
+  height: 90vh;
+  background-color: var(--background);
+}
+
+.intro{
+  position: relative;
+  top: 6vh;
+}
+
+.intro p{
+  width: 200px;
+}
+
+.body .alert{
+  top: 6vh;
+  left: 5vw;
+  width: 74vw;
+  padding: 0px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.alert .notification{
+  border-collapse: collapse;
+  border: solid;
+  border-width: 5px;
+  border-color: var(--theme);
+  position: relative;
+  width: 100%;
+  border-radius: 20px;
+  height: 70px;
+}
+
+.notification tr{
+  border-bottom: solid;
+  border-width: 1px;
+  border-color: var(--theme);
+  height: 20px; 
+}
+
+.notification td{
+  height: 10px;
+
+}
+
+.body table p{
+  width: 200px;
 }
 
 .reportform{
   margin-top: 130px;
-}
-
-.report{
-  width: 100vw;
-  height: 100vh;
-  top: 75px;
-  position: fixed;
-  right: 8px;
-  
 }
 
 .report form{
@@ -419,6 +481,118 @@ form{
 .submit:hover{
   width: 50%;
   height: 40px;
+}
+
+.left{
+  width: 40vw;
+  position: relative;
+  top: 6vh;
+  margin-right: 40px;
+}
+
+.page-title{
+  width: 170px;
+  margin-left: 30px;
+}
+
+.page-title h3{
+  font-weight: bold;
+}
+
+.level{
+  position: relative;
+  top: 30px;
+  width: 100px;
+  left: 45px;
+}
+
+.instructor{
+  width: 80%;
+  height: 20%;
+  position: relative;
+  left: 10%;
+  top: 6vh;
+  border-bottom: 1px solid;
+  border-color: var(--theme);
+  margin-bottom: 15px;
+  max-height: 20vh;
+}
+
+.initials{
+  width: 40px;
+  height: 40px;
+  margin-bottom: 0px;
+  position: relative;
+  background-color: var(--other);
+  padding-top: 8px;
+  border-radius: 50%;
+  color: black;
+  font-weight: bold;
+}
+
+.instructor-name, .course{
+  width: 15vw;
+  position: relative;
+  left: 50px;
+  top: -4vh;
+  margin-bottom: 0px;
+}
+
+.course{
+  left: 15px;
+  font-weight: lighter;
+  font-size: small;
+}
+
+.right{
+  position: fixed;
+  bottom: 8vh;
+  width: 40vw;
+  left: 58vw;
+  background-color: var(--page);
+  height: 80vh;
+  padding-top: 7%;
+  padding-left: 5%;
+  padding-right: 5%;
+  z-index: 0;
+}
+
+.lecturer{
+ width: 300px;
+ position: relative;
+ 
+}
+
+.right .level{
+  position: relative;
+  top: 1%;
+  left: 1%;
+}
+
+.subject{
+  position: relative;
+  top: 10%;
+}
+
+.subject p{
+  width: 180px;
+}
+
+.input-box, .compose-box{
+  width: 30vw;
+  border-color: white;
+  border: solid;
+  border-width: 1px;
+}
+
+.compose-box{
+  height: 130px;
+}
+
+.submit-button{
+  position: relative;
+  top: 5%;
+  width: 30vw;
 }
 
 .footer{
@@ -574,7 +748,7 @@ left: 11vw;
 }
 
 @media screen and (max-width: 1030px){
-  .help, .sign-in, .sign-up, .dashboard, .logout{
+  .help, .sign-in, .sign-up, .dashboard, .landing-header .logout{
     display: none;
   }
   .menu-icon{
@@ -588,9 +762,11 @@ left: 11vw;
     width: 30px;
     cursor: pointer;
   }
+
   .menuIcon{
     display: flex;
   }
+
   .closeIcon{
     display: none;
     width: 20px;
@@ -659,17 +835,8 @@ left: 11vw;
     transition: right 0.5s;
   }
 
-  .li,
-  .nav-links a{
-    background-color: transparent;
-    margin-left: 0px;
-    border-radius: 5px;
-  }
-
-  .li{
-    position: relative;
-    top: 10px;
-    display: block;
+  .navbar div{
+    display: none;
   }
 
   .navbar h1{
@@ -682,15 +849,10 @@ left: 11vw;
     cursor: pointer;
   }
 
-  .nav-links a{
-    color: white;
-    transition: color 0.2s;
-  }
 
   .nav-links a:hover{
     color: white;
   }
-
 
   .landing-bck #show-menu:checked ~ .landing-header{
     background-color: var(--theme);
@@ -743,6 +905,30 @@ left: 11vw;
     .menuIcon{
       display: none;
     }
+  }
+
+  .menu{
+    left: -100%;
+  }
+
+  .navbar-menu{
+    width: 30px;
+    position: relative;
+    top: 10px;
+    cursor: pointer;
+  }
+
+  .head #show-menu:checked ~ .menu{
+    left: 0%;
+    transition: all 0.5s;
+  }
+
+  .body{
+    margin-left: 0px;
+  }
+
+  .right{
+    left: 50vw;
   }
 
   .rememberpass{
