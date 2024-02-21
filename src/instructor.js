@@ -2,7 +2,7 @@ import Navbar from "./Navbar";
 
 const Instructor = () => {
    return ( 
-      <div>
+      <div className="instructor-page">
          <Navbar/> 
          <div className="body">
             <div className="left">

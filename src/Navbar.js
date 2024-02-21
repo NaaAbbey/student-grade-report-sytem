@@ -1,18 +1,22 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import menuicon from "./icons/open-menu-6207.png"
 
 const Navbar = () => {
     return ( 
 		<div className="head">
+			<input type="checkbox" id="show-menu" style={{display: "none"}}/>
 			<nav className="navbar">
-				<h3 className='logo'>GradeSOS</h3>
+				<Link to="/logged-in"><h3 className='logo'>GradeSOS</h3></Link>
 				<div className='help-logo'><p>?</p></div>
 				<div className='account'><p>PP</p></div>
+				<div className="menu-icon">
+					<label for="show-menu" style={{backgroundColor: "transparent"}}><img className="navbar-menu" src={menuicon} alt="menu icon" /></label>
+				</div>
 			</nav>
-			<input type="checkbox" id="show-menu" style={{display: "none"}}/>
+			
 			<div className="menu">
 				<div className='sidebar'>
-					<h3 className='logo'>GradeSOS</h3>
+				<Link to="/logged-in"><h3 className='logo'>GradeSOS</h3></Link>
 					<div className="li">
 						<NavLink to="/dashboard" className='a'>	
 							<svg className='sidebar-icon-white' width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -42,7 +46,7 @@ const Navbar = () => {
 							Grades
 						</NavLink >
 					</div>
-					<div className="logout">
+					<div className="sidebar-logout">
 						<NavLink to="/login" className='a'>
 						<svg className='logout-icon' width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path fill-rule="evenodd" clip-rule="evenodd" d="M16.1246 12.0004C16.1246 11.8015 16.0456 11.6107 15.9049 11.47C15.7643 11.3294 15.5735 11.2504 15.3746 11.2504H4.40158L6.36258 9.57036C6.43743 9.50628 6.49893 9.42808 6.54356 9.34022C6.5882 9.25237 6.61509 9.15659 6.6227 9.05835C6.63031 8.9601 6.6185 8.86132 6.58794 8.76764C6.55738 8.67396 6.50867 8.58722 6.44458 8.51236C6.3805 8.43751 6.3023 8.37601 6.21444 8.33138C6.12659 8.28675 6.03081 8.25986 5.93256 8.25224C5.83432 8.24463 5.73554 8.25644 5.64186 8.287C5.54818 8.31756 5.46143 8.36628 5.38658 8.43036L1.88658 11.4304C1.80425 11.5008 1.73814 11.5882 1.69282 11.6866C1.64749 11.785 1.62402 11.892 1.62402 12.0004C1.62402 12.1087 1.64749 12.2157 1.69282 12.3141C1.73814 12.4125 1.80425 12.5 1.88658 12.5704L5.38658 15.5704C5.53775 15.6998 5.73415 15.7639 5.93256 15.7485C6.13098 15.7331 6.31516 15.6395 6.44458 15.4884C6.57401 15.3372 6.63808 15.1408 6.6227 14.9424C6.60732 14.744 6.51375 14.5598 6.36258 14.4304L4.40258 12.7504H15.3746C15.5735 12.7504 15.7643 12.6713 15.9049 12.5307C16.0456 12.39 16.1246 12.1993 16.1246 12.0004Z" fill="white"/>
@@ -52,9 +56,7 @@ const Navbar = () => {
 						</NavLink >
 					</div>
 				</div>
-				<div className="menu-icon">
-					<label for="show-menu" style={{backgroundColor: "transparent"}}><img className="navbar-menu" src={menuicon} alt="menu icon" /></label>
-				</div>
+
 			</div>
 		</div>
 

@@ -1,6 +1,7 @@
 @import url(https://cdn.linearicons.com/free/1.0.0/icon-font.min.css);
 @import url('https://fonts.googleapis.com/css2?family=Days+One&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-:root{
+
+:root {
   --background: #0A0521;
   --input-box: #CDCDCD;
   --theme: #A589DD;
@@ -8,58 +9,71 @@
   --page: #0F0929;
 }
 
-*{
+* {
   font-family: "work sans", 'Inter', Times, serif;
   color: white;
 }
 
-.App{
-  width: 100%;
+body {
+  min-height: 100vh;
+  min-width: 100vw;
+  background-color: var(--background);
+}
+
+.App {
+  width: 100vw;
   height: 100vh;
   margin-top: 0px;
   background-color: var(--background);
 }
 
-.a{
+.body {
+  margin-left: 250px;
+  margin-top: 85px;
+  height: inherit;
+  width: inherit;
+  background-color: var(--background);
+  overflow: auto;
+  display: flex; 
+}
+
+.a, nav a {
   text-decoration: none;
 }
 
-.head{
-  border-bottom: solid;
-  border-width: 1px;
-  margin: 0px;
-  border-color: var(--theme);
-  font-weight: bold;
-  height: 85px;
-  background-color: transparent;
-  
+.head {
+  position: fixed;
+  top: 0vh;
+  z-index: 100;
 }
 
-.landing-bck{
-  background-color: black;
-  width: 100vw; 
+.landing-bck {
+  background-color: var(--background);
+  width: 100vw;
   height: 100vh;
   position: fixed;
+  z-index: 20;
 }
 
-.landing-header{
+.landing-header {
   background-color: var(--background);
   display: flex;
   justify-content: space-between;
   align-content: center;
+  position: fixed;
+  width: 100vw;
   height: 70px;
-  padding-top: 10px ;
+  padding-top: 10px;
 }
 
-.logo{
+.logo {
   margin-left: 10px;
   padding-top: 5px;
   font-weight: bold;
   width: 150px;
 }
 
-
-.help{
+.help {
   font-size: 16px;
   height: 20px;
   padding: 12px;
@@ -67,14 +81,14 @@
   left: 10vw;
 }
 
-.sign-in{
+.sign-in {
   align-self: right;
   position: relative;
   left: 23vw;
   padding: 12px;
 }
 
-.sign-up{
+.sign-up {
   width: 100px;
   height: 48px;
   border-radius: 14px;
@@ -82,43 +96,48 @@
   margin-right: 10px;
 }
 
-.dashboard, .logout{
+.header-dashboard,
+.logout {
   padding: 12px;
   position: relative;
-  
+
 }
 
-.dashboard{
+.header-dashboard {
   left: -10vw;
   width: 120px;
 }
 
-.logout{
+.logout {
   width: 100px;
   height: 48px;
   margin-right: 10px;
 }
 
-.menu-icon{
+.landing-header .logo {
+  top: 0px;
+}
+
+.menu-icon {
   display: none;
 }
 
-.landing-character{
+.landing-character {
   height: 45vh;
   width: 40vw;
   background-color: transparent;
   display: block;
   position: relative;
   left: 30vw;
-  top: 5%;
+  top: 15%;
 }
 
-.landing-content{
-  top: 12vh;
+.landing-content {
+  top: 20vh;
   position: relative;
 }
 
-.slogan{
+.slogan {
   background-color: transparent;
   width: 80vw;
   height: 50px;
@@ -128,23 +147,24 @@
   top: 10%;
 }
 
-.slogan h1{
+.slogan h1 {
   color: var(--persian-blue);
   font-weight: bold;
-  
+
 }
 
-.slogan h1 span{
+.slogan h1 span {
   color: var(--theme);
 }
 
-.motto{
+.motto {
   position: relative;
   top: 1vh;
   left: 2vw;
 }
 
-.start-button, .contact-us{
+.start-button,
+.contact-us {
   border-radius: 14px;
   border: none;
   width: 200px;
@@ -153,29 +173,29 @@
   top: 3vh;
 }
 
-.start-button{
+.start-button {
   background-color: var(--theme);
 }
 
-.contact-us{
+.contact-us {
   background-color: white;
   color: var(--theme);
   left: 5%;
 }
 
-.landing-bck a{
+.landing-bck a {
   background-color: transparent;
 }
 
-.login-img{
+.login-img {
   position: relative;
   background-color: var(--other);
   width: 50vw;
   height: 100vh;
- 
+
 }
 
-.loginImg{
+.loginImg {
   width: 30vw;
   position: relative;
   top: 38vh;
@@ -183,23 +203,26 @@
 
 }
 
-.loginBackground h1{
+.loginBackground h1 {
   top: 10px;
 }
 
-.loginBackground .landing-header{
+.loginBackground .landing-header {
   position: fixed;
-  z-index: 100;
+  z-index: 20;
   width: 100vw;
 }
 
-.loginBackground{
+.loginBackground {
   height: 100vh;
   width: 100vw;
   position: fixed;
 }
 
-.name, .explain, .input-box, .compose-box{
+.name,
+.explain,
+.input-box,
+.compose-box {
   margin-bottom: 40px;
   width: 40vw;
   border-radius: 12px;
@@ -209,7 +232,7 @@
   background-color: transparent;
 }
 
-.login{
+.login {
   background-color: white;
   text-align: center;
   width: 50vw;
@@ -222,13 +245,14 @@
   height: 100vh;
 }
 
-.login h1{
+.login h1 {
   color: var(--persian-blue);
   font-weight: bold;
-  margin-bottom: 120px;
+  margin-bottom: 100px;
 }
 
-.studentId, .pin{
+.studentId,
+.pin {
   color: #2b2f2f;
   width: 100px;
   position: relative;
@@ -236,11 +260,11 @@
   font-weight: bold;
 }
 
-.pin{
+.pin {
   width: 50px;
 }
 
-.forgotpin{
+.forgotpin {
   left: 30%;
   position: relative;
   font-weight: lighter;
@@ -248,33 +272,40 @@
   margin-top: 10px;
 }
 
-.login form{
+.login form {
   width: 100%;
   border-radius: 10px;
   font-weight: bold;
   font-size: 17px;
   color: #2b2f2f;
   padding: 0px;
+  position: relative;
+  top: 8%;
+  left: 0%;
 }
 
-.login-button, .submit-button{
+.login-button,
+.submit-button {
   width: 40vw;
   height: 55px;
   border-radius: 12px;
   background-color: var(--theme);
   border: none;
   margin-top: 30px;
+  margin-bottom: 10%;
 }
 
-.login-button:hover{
-  transition: width 0.3s ease-in-out, height 0.3s ease-in-out, background-color 0.5s ease-in-out, color 0.3s ease-in-out;
+.login-button:hover,
+.submit-button:hover {
   cursor: pointer;
   background-color: var(--other);
   width: 43vw;
   height: 57px;
+  color: var(--background);
+  transition: all 0.3s ease-in-out;
 }
 
-nav{
+nav {
   position: fixed;
   align-items: center;
   display: flex;
@@ -286,11 +317,11 @@ nav{
   z-index: 50;
   border-bottom: solid;
   border-width: 1px;
-  margin: 0px;
   border-color: var(--theme);
 }
 
-.account, .help-logo{
+.account,
+.help-logo {
   width: 40px;
   height: 40px;
   background-color: var(--theme);
@@ -299,17 +330,25 @@ nav{
   border-radius: 50%;
 }
 
-.help-logo{
+.account {
+  margin-right: 10px;
+}
+
+.help-logo {
   left: 35%;
 }
 
-.account p, .help-logo p{
+.account p,
+.help-logo p {
   margin-top: 22%;
   margin-bottom: 0;
 }
 
+.head .navbar {
+  position: fixed;
+}
 
-.head .menu{
+.head .menu {
   width: 18vw;
   height: 100vh;
   position: fixed;
@@ -317,8 +356,8 @@ nav{
   z-index: 100;
 }
 
-.sidebar{
-  width: 230px;
+.sidebar {
+  width: 250px;
   height: 100vh;
   background-color: var(--page);
   border-right: solid;
@@ -327,188 +366,205 @@ nav{
   color: white;
 }
 
-.logo{
+.logo {
   position: relative;
   top: 20px;
 }
 
-.navbar .logo{
-  top: 0px;
+.navbar .logo {
+  top: 5px;
 }
 
-.sidebar a{
+.sidebar a {
   color: white;
   position: relative;
-   position: relative;
+  position: relative;
   width: 100%;
   height: 100%;
   border-radius: 8px;
   padding-top: 12px;
+  text-decoration: none;
 }
 
-.li, .logout{
+.li,
+.sidebar-logout {
   position: relative;
   left: 5%;
   display: flex;
   color: white;
   top: 27vh;
   left: 10%;
-  width: 185px;
+  width: 200px;
   height: 45px;
   margin-top: 10px;
 }
 
-.logout{
-  top: 55vh;
+.sidebar-logout {
+  top: 50vh;
   padding: 0px;
 }
- 
-.a:hover, a.active{
+
+.sidebar .a:hover,
+.sidebar a.active {
   color: var(--background);
   background-color: var(--other);
 }
 
-a.active svg path, .a:hover svg path, .logout-icon{
+.sidebar a.active svg path,
+.sidebar a.a:hover svg path,
+.logout-icon {
   fill: var(--background);
 }
 
-.sidebar-icon-white, .logout-icon{
+.sidebar-icon-white,
+.logout-icon {
   position: relative;
   top: -7%;
   left: -7%;
 }
 
-.body{
-  position: relative;
-  margin-left: 18vw;
-  height: 90vh;
-  background-color: var(--background);
-}
-
-.intro{
+.intro {
   position: relative;
   top: 6vh;
 }
 
-.intro p{
+.intro p {
   width: 200px;
 }
 
-.body .alert{
+.dashboard .body{
+  height: 100vh;
+  overflow: hidden;
+}
+
+.body .alert {
   top: 6vh;
   left: 5vw;
   width: 74vw;
   padding: 0px;
+  margin-bottom: 50px;
+  overflow: visible;
+}
+
+.alert .notification {
+  position: relative;
+  width: 98%;
+  height: 100%;
+  border: 1px solid var(--theme);
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 20px;
   overflow: hidden;
-  border-radius: 20px;
-}
-
-.alert .notification{
-  border-collapse: collapse;
-  border: solid;
-  border-width: 5px;
-  border-color: var(--theme);
-  position: relative;
-  width: 100%;
-  border-radius: 20px;
-  height: 70px;
-}
-
-.notification tr{
-  border-bottom: solid;
-  border-width: 1px;
-  border-color: var(--theme);
-  height: 20px; 
-}
-
-.notification td{
-  height: 10px;
-
-}
-
-.body table p{
-  width: 200px;
-}
-
-.reportform{
-  margin-top: 130px;
-}
-
-.report form{
-  box-shadow: -5px -5px 5px rgba(0, 0, 0, 0.3), 3px 3px 5px rgba(0, 0, 0, 0.3);
-  background-color: rgba(83, 115, 163, 0.322);
-  width: 50vw;
-  padding: 10%;
-  position: relative;
-  left: 15%;
-  margin-top: 90px;
-  border-radius: 30px;
-  padding-bottom: 4%;
-  top: 20vh;
-  height: 45vh;
-  padding-top: 4%;
-}
-
-.report .name, 
-.explain{
-  background-color: rgba(255, 255, 255, 0.644);
-}
-
-.explain{
-  height: 70px;
-}
-
-form{
-  color: black;
-  font-weight: bold;
-  font-size: 16px;
-}
-
-.submit{
-  height: 35px;
-  width: 40%;
-  border-radius: 50px;
-  cursor: pointer;
-  background-color: rgb(31, 70, 107);
-  color: white;
-  font-weight: bold;
-  border: none;
-  font-size: 15px;
-  transition: width 0.3s ease, height 0.3s ease;
   margin-top: 20px;
 }
 
-.submit:hover{
-  width: 50%;
+.notification tr {
+  height: 50px;
+}
+
+.notification td {
+  height: 10px;
+  border-bottom: 1px solid var(--theme);
+
+}
+.notification a {
+  text-decoration: none;
+  color: white;
+}
+
+.notification p {
+  margin: 0px;
+}
+
+.notification-bell{
+  width: 40px;
   height: 40px;
+  background-color: var(--theme);
+  border-radius: 50%;
+  position: absolute;
+  left: -5px;
+  top: 5px;
 }
 
-.left{
-  width: 40vw;
+.notificationIcon{
+  width: 25px;
   position: relative;
-  top: 6vh;
-  margin-right: 40px;
+  top: 15%;
 }
 
-.page-title{
+.help-box{
+  position: relative;
+  bottom: 0;
+}
+
+.faq{
+  position: relative;
+  top: 70px;
+  width: 180px;
+  font-weight: bold;
+  font-size: larger;
+}
+.reportform {
+  width: 50vw;
+  position: relative;
+  left: 20%;
+  height: 90vh;
+  top: 10vh;
+  margin-bottom: 3vh;
+}
+
+.reportform h4 {
+  width: 100%;
+  margin-bottom: 5%;
+}
+
+.reportform .submit-button {
+  top: 0%;
+  margin-top: 0px;
+  margin-bottom: 5%;
+}
+
+.reportform .submit-button:hover {
+  left: 0%;
+}
+
+.reportform p {
+  width: 60%;
+}
+
+.reportform .input-box,
+.reportform .compose-box {
+  margin-bottom: 5%;
+
+}
+
+.left {
+  width: 50%;
+  flex-direction: row;
+  margin-right: 40px;
+  height: 95vh;
+  margin-top: 30px;
+}
+
+.page-title {
   width: 170px;
   margin-left: 30px;
 }
 
-.page-title h3{
+.page-title h3 {
   font-weight: bold;
 }
 
-.level{
+.level {
   position: relative;
   top: 30px;
   width: 100px;
   left: 45px;
 }
 
-.instructor{
+.instructor {
   width: 80%;
-  height: 20%;
+  height: 13%;
   position: relative;
   left: 10%;
   top: 6vh;
@@ -518,7 +574,7 @@ form{
   max-height: 20vh;
 }
 
-.initials{
+.initials {
   width: 40px;
   height: 40px;
   margin-bottom: 0px;
@@ -530,7 +586,8 @@ form{
   font-weight: bold;
 }
 
-.instructor-name, .course{
+.instructor-name,
+.course {
   width: 15vw;
   position: relative;
   left: 50px;
@@ -538,64 +595,120 @@ form{
   margin-bottom: 0px;
 }
 
-.course{
+.course {
   left: 15px;
   font-weight: lighter;
   font-size: small;
 }
 
-.right{
-  position: fixed;
-  bottom: 8vh;
-  width: 40vw;
-  left: 58vw;
+.right {
+  flex: 0.5;
   background-color: var(--page);
-  height: 80vh;
-  padding-top: 7%;
-  padding-left: 5%;
-  padding-right: 5%;
-  z-index: 0;
+  height: 90vh;
+  padding: 6% 5%;
+  position: relative;
+  
 }
 
-.lecturer{
- width: 300px;
- position: relative;
- 
+.lecturer {
+  width: 300px;
+  position: relative;
+
 }
 
-.right .level{
+.right .level {
   position: relative;
   top: 1%;
   left: 1%;
 }
 
-.subject{
+.subject {
   position: relative;
   top: 10%;
 }
 
-.subject p{
+.subject p {
   width: 180px;
 }
 
-.input-box, .compose-box{
+.input-box,
+.compose-box {
   width: 30vw;
   border-color: white;
   border: solid;
   border-width: 1px;
 }
 
-.compose-box{
+.compose-box {
   height: 130px;
 }
 
-.submit-button{
+.submit-button {
   position: relative;
   top: 5%;
   width: 30vw;
 }
 
-.footer{
+.submit-button:hover {
+  width: 33vw;
+  left: -5%;
+}
+
+.gradeReport .body, .dashboard .body{
+  flex-direction: column;
+}
+
+.year{
+  display: flex;
+  position: relative;
+  width: 100%;
+  justify-content: space-evenly;
+  margin-top: 30px;
+  height: 50px;
+  flex: 1;
+}
+
+.year button, .year a{
+  width: 30%;
+  height: 30px;
+  border: none;
+  background-color: transparent;
+}
+
+.year button:active, .year a:active{
+  border-top: 2px solid var(--theme);
+}
+
+.first{
+  flex: 1;
+  margin-top: 30px;
+}
+
+.semester{
+  width: 20%;
+}
+.grade-report{
+  align-items: center;
+  border: none;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.grade-report tr{
+ border-bottom: 1px solid var(--theme);
+ height: 50px;
+ width: 100%;
+}
+
+.grade-report td{
+ width: 30%; 
+}
+
+.grade-report .th{
+  font-weight: bold;
+}
+.footer {
   background-color: var(--persian-blue);
   width: 100vw;
   height: 160px;
@@ -603,7 +716,8 @@ form{
   bottom: 0%;
 }
 
-.location-icon, .mail-icon{
+.location-icon,
+.mail-icon {
   width: 23px;
   position: relative;
   top: 35px;
@@ -611,7 +725,7 @@ form{
   display: inline;
 }
 
-.locate{
+.locate {
   width: 5vw;
   display: inline;
   position: relative;
@@ -619,33 +733,34 @@ form{
   right: 8vw;
 }
 
-.location p{
+.location p {
   margin-bottom: 0px;
 }
 
-.location, .mail-footer {
+.location,
+.mail-footer {
   display: block;
   position: relative;
   width: 250px;
   left: 12vw;
 }
 
-.school{
+.school {
   display: block;
 }
 
-.mail-icon{
+.mail-icon {
   top: 13px;
   width: 22px;
 }
 
-.mail-footer{
-top: -15px;
-left: 11vw;
-  
+.mail-footer {
+  top: -15px;
+  left: 11vw;
+
 }
 
-.info-footer{
+.info-footer {
   width: 50vw;
   display: inline;
   position: relative;
@@ -653,45 +768,47 @@ left: 11vw;
   left: -9vw;
 }
 
-.about, .cookies, 
-.terms, .policy{
+.about,
+.cookies,
+.terms,
+.policy {
   display: inline;
   margin-right: 10px;
   cursor: pointer;
 }
 
-.socials{
+.socials {
   position: relative;
   top: -195px;
   left: 55vw;
   width: 200px;
 }
 
-.socials p{
+.socials p {
   margin-bottom: 3px;
 }
 
-.icon{
+.icon {
   width: 20px;
   margin-left: 12px;
   cursor: pointer;
 }
 
-.subscription{
+.subscription {
   width: 30vw;
   position: relative;
   left: 70vw;
   top: -135px;
 }
 
-.subscribe{
+.subscribe {
   font-weight: bold;
   left: 1vw;
   position: relative;
   width: 300px;
 }
 
-.subscribe-sub{
+.subscribe-sub {
   position: relative;
   width: 250px;
   left: 1vw;
@@ -699,7 +816,7 @@ left: 11vw;
   top: 5px;
 }
 
-.line{
+.line {
   border-bottom: 1px solid white;
   width: 23vw;
   position: relative;
@@ -707,14 +824,14 @@ left: 11vw;
   top: 18px;
 }
 
-.email{
+.email {
   font-size: x-small;
   position: relative;
   top: 17px;
   left: -9vw;
 }
 
-.send-icon{
+.send-icon {
   width: 15px;
   position: relative;
   left: 10vw;
@@ -722,70 +839,82 @@ left: 11vw;
   cursor: pointer;
 }
 
-@media screen and (max-width: 1200px){
-  .navbar h1{
-    top: -3px;
+@media screen and (max-width: 1200px) {
+  .body .alert{
+    width: 70vw;
   }
-
-  .nav-links{
-    margin-top: 0px;
-
-  }
-
-  .slogan{
+  .slogan {
     left: 5vw;
-    
+
   }
 
-  .info-footer{
+  .info-footer {
     left: -3vw;
     top: -13vh;
-}
+  }
 
-  .sign-in{
+  .sign-in {
     left: 20vw;
   }
 }
 
-@media screen and (max-width: 1030px){
-  .help, .sign-in, .sign-up, .dashboard, .landing-header .logout{
+@media screen and (max-width: 1030px) {
+
+  .help,
+  .sign-in,
+  .sign-up,
+  .header-dashboard,
+   .logout {
     display: none;
   }
-  .menu-icon{
-    display: flex;
-    position: fixed;
-    right:  40px;
-    top: 15px;
+
+  .navbar .help-logo,
+  .account {
+    display: none;
   }
 
-  .menuIcon, .closeIcon{
+  .menu-icon {
+    display: flex;
+    position: fixed;
+    right: 40px;
+    top: 15px;
+    z-index: 50;
+  }
+
+  .navbar .menu-icon {
+    position: relative;
+    top: -5px;
+  }
+
+  .menuIcon,
+  .closeIcon {
     width: 30px;
     cursor: pointer;
   }
 
-  .menuIcon{
+  .menuIcon {
     display: flex;
   }
 
-  .closeIcon{
+  .closeIcon {
+    z-index: 20;
     display: none;
     width: 20px;
-
   }
 
-  .landing-character{
+  .landing-character {
     left: 20vw;
     top: 5%;
     width: 60vw;
     z-index: 0;
   }
 
-  .landing-content{
+  .landing-content {
     position: relative;
     top: 12vh;
   }
 
-  .slogan{
+  .slogan {
     background-color: transparent;
     width: 75vw;
     height: 18vh;
@@ -796,13 +925,14 @@ left: 11vw;
     top: 10;
   }
 
-  .motto{
+  .motto {
     width: 65vw;
     top: -5vh;
     left: 18%;
   }
 
-  .start-button, .contact-us{
+  .start-button,
+  .contact-us {
     width: 45vw;
     height: 50px;
     top: -3vh;
@@ -812,61 +942,36 @@ left: 11vw;
     text-decoration: none;
   }
 
-  nav{
+  nav {
     text-align: center;
+    z-index: 20;
   }
 
-  .nav-links{
-    position: fixed;
-    display: block;
-    right: -100%;
-    top: 88px;
-    height: 100%;
-    line-height: 350%;
-    background-color:var(--persian-blue);
-    padding: 0px;
-    width: 100%;
-    max-width: 300px;
-    height: 100vh;
-    min-height: 250px;
-    margin-right: 0px;
-    border-top-left-radius: 25px;
-    z-index: 50;
-    transition: right 0.5s;
-  }
-
-  .navbar div{
-    display: none;
-  }
-
-  .navbar h1{
-    top: 10px;
-  }
- 
-  .li:hover{
-    background-color:rgba(104, 128, 163, 0.507);
+  .li:hover {
+    background-color: rgba(104, 128, 163, 0.507);
     border-radius: 10px;
     cursor: pointer;
   }
 
-
-  .nav-links a:hover{
-    color: white;
-  }
-
-  .landing-bck #show-menu:checked ~ .landing-header{
+  .landing-bck #show-menu:checked~.landing-header,
+  .loginBackground #show-menu:checked~.landing-header {
     background-color: var(--theme);
-    height: 25vh;
+    height: 200px;
     display: block;
-    z-index: 100;
+    z-index: 20;
     transition: all 0.3s ease-in-out;
 
-    
-    .help, .sign-in, .sign-up, .dashboard, .logout{
+
+    .help,
+    .sign-in,
+    .sign-up,
+    .header-dashboard,
+    .logout {
       display: block;
+      transition: all 0.4s ease-in-out;
     }
 
-    .help{
+    .help {
       width: 60px;
       padding: 12px;
       left: 12px;
@@ -874,19 +979,20 @@ left: 11vw;
       transition: all 0.5s;
     }
 
-    .sign-in, .logout{
+    .sign-in,
+    .logout {
       width: 100px;
       left: 0px;
       transition: all 0.5s;
     }
 
-    .dashboard{
+    .header-dashboard {
       width: 120px;
       left: 7px;
       transition: all 0.5s;
     }
 
-    .logout{
+    .logout {
       left: 4px;
     }
 
@@ -897,143 +1003,148 @@ left: 11vw;
     }
   }
 
-  .landing-bck #show-menu:checked ~ .menu-icon{
-    .closeIcon{
+  .landing-bck #show-menu:checked~.menu-icon,
+  .loginBackground #show-menu:checked~.menu-icon {
+    .closeIcon {
       display: flex;
     }
 
-    .menuIcon{
+    .menuIcon {
       display: none;
     }
   }
 
-  .menu{
+  .menu {
     left: -100%;
   }
 
-  .navbar-menu{
+  .navbar-menu {
     width: 30px;
     position: relative;
     top: 10px;
     cursor: pointer;
   }
 
-  .head #show-menu:checked ~ .menu{
+  .head #show-menu:checked~.menu {
     left: 0%;
     transition: all 0.5s;
   }
 
-  .body{
+  .body {
     margin-left: 0px;
   }
 
-  .right{
-    left: 50vw;
+  .reportform{
+    left: 25%;
   }
 
-  .rememberpass{
-    margin-left: 0px;
+  .intro, .faq{
+    position: relative;
+    left: 10%;
   }
 
-  .rememberme{
-    margin-right: 0px;
+  .body .alert{
+    position: relative;
+    left: 18%;
   }
 
-  .footer{
+  .footer {
     height: 50%;
     z-index: 100;
   }
 
-  .locate{
+  .locate {
     display: block;
     left: 33vw;
   }
 
-  .location-icon{
+  .location-icon {
     left: -1vw;
     top: 40px;
   }
 
-  .location{
+  .location {
     left: 4.5vw;
   }
 
-  .mail-icon{
+  .mail-icon {
     width: 22px;
     left: -0.5vw;
     top: 10px;
   }
 
-  .mail-footer{
+  .mail-footer {
     top: -15px;
     left: 4vw;
   }
 
-  .info-footer{
+  .info-footer {
     display: block;
     top: 0px;
     position: relative;
     left: 27vw;
   }
 
-  .subscription{
+  .subscription {
     top: 20px;
     left: 37vw;
   }
 
-  .subscribe{
+  .subscribe {
     left: -2vw;
   }
 
-  .subscribe-sub{
+  .subscribe-sub {
     left: -1.5vw;
   }
 
-  .email{
+  .email {
     left: -9vw;
   }
 
-  .line{
+  .line {
     width: 290px;
     left: -0.3vw;
   }
 
-  .send-icon{
+  .send-icon {
     left: 13vw;
   }
 
-  .socials{
+  .socials {
     top: 40px;
     left: 41vw;
   }
 
 }
 
-@media screen and (max-width: 700px){
+@media screen and (max-width: 700px) {
   .landing-header {
     display: none;
   }
 
-  .login-img{
+  .login-img {
     display: none;
   }
 
-  .login{
+  .login {
     top: 0;
     width: 100vw;
     left: 0;
   }
 
-  .login .name, .login-button{
+  .login .name,
+  .login-button {
     width: 80vw;
     height: 60px;
   }
-  
-  .studentId, .pin{
+
+  .studentId,
+  .pin {
     left: 10vw;
   }
 
-  .forgotpin{
+  .forgotpin {
     left: -30vw;
   }
 }

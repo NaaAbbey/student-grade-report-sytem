@@ -8,10 +8,10 @@ const Logged = () => {
         <div className="landing-bck">
             <input type="checkbox" id="show-menu" style={{display:"none"}}/>
             <div className='landing-header'>
-                <h3>GradeSOS</h3>
+                <h3 className='logo'>GradeSOS</h3>
                 <div className='help'>Help</div>
-                <Link to="/dashboard" className='a'><div className='dashboard'>Dashboard</div></Link>
-                <Link to="/landingpage" className='a'><div className='logout'>Logout</div></Link>
+                <Link to="/dashboard" className='a'><div className='header-dashboard'>Dashboard</div></Link>
+                <Link to="/" className='a'><div className='logout'>Logout</div></Link>
             </div>
             <div className="menu-icon">
                 <label for="show-menu"><img className="menuIcon" src={menuicon} alt="menu icon" /></label>

@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import landingImage from "./images/landing-image.png";
 import menuicon from "./icons/open-menu-6207.png";
-import closeicon from "./icons/close-x-10324.png"
+import closeicon from "./icons/close-x-10324.png";
 
 const Landing = () => {
     return ( 
