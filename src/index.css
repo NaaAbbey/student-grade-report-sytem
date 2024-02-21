@@ -668,20 +668,36 @@ nav {
   flex: 1;
 }
 
-.year button, .year a{
+
+
+.content{
+  margin-top: 20px;
+  display: none;
+}
+
+.active-content{
+  display: block;
+}
+
+.tabs{
   width: 30%;
   height: 30px;
   border: none;
   background-color: transparent;
 }
 
-.year button:active, .year a:active{
+.active-tabs{
   border-top: 2px solid var(--theme);
+}
+
+.active-tabs::before{
+  transform: translateX(-50%);
 }
 
 .first{
   flex: 1;
   margin-top: 30px;
+  margin-bottom: 50px;
 }
 
 .semester{
@@ -707,6 +723,12 @@ nav {
 
 .grade-report .th{
   font-weight: bold;
+}
+
+.blank{
+  font-weight: bold;
+  font-size: larger;
+  margin-top: 60px;
 }
 .footer {
   background-color: var(--persian-blue);
