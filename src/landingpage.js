@@ -9,7 +9,7 @@ const Landing = () => {
             <input type="checkbox" id="show-menu" style={{display:"none"}}/>
             <div className='landing-header'>
                 <h3 className='logo'>GradeSOS</h3>
-                <div className='help'>Help</div>
+                <Link to='/help' className='a'><div className='help'>Help</div></Link>
                 <Link to="/login" className='a'><div className='sign-in'>Sign in</div></Link>
                 <Link to="/logged-in" className='a'><button className='sign-up'>Sign up</button></Link>
             </div>
@@ -21,8 +21,8 @@ const Landing = () => {
             <div className='landing-content'>
                 <div className="slogan"><h1>Keeping <span>track</span> of your <span>grades</span>  made easy</h1></div>
                 <div className='motto'>Effortless Grade Management: Streamlining Your Academic Success Journey</div>
-                <button className="start-button" type="submit">Get Started</button>
-                <button className="contact-us" type="submit">Contact us</button>
+                <Link to="/login" className='a'><button className="start-button" type="submit">Get Started</button></Link>
+                <Link to='/help' className='a'><button className="contact-us" type="submit">Contact us</button></Link>
             </div>
         </div>
      );

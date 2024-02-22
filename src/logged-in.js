@@ -9,7 +9,7 @@ const Logged = () => {
             <input type="checkbox" id="show-menu" style={{display:"none"}}/>
             <div className='landing-header'>
                 <h3 className='logo'>GradeSOS</h3>
-                <div className='help'>Help</div>
+                <Link to='/help-loggedin' className='a'><div className='help'>Help</div></Link>
                 <Link to="/dashboard" className='a'><div className='header-dashboard'>Dashboard</div></Link>
                 <Link to="/" className='a'><div className='logout'>Logout</div></Link>
             </div>
@@ -21,8 +21,8 @@ const Logged = () => {
             <div className='landing-content'>
                 <div className="slogan"><h1>Keeping <span>track</span> of your <span>grades</span>  made easy</h1></div>
                 <div className='motto'>Effortless Grade Management: Streamlining Your Academic Success Journey</div>
-                <button className="start-button" type="submit">Get Started</button>
-                <button className="contact-us" type="submit">Contact us</button>
+                <Link to="/dashboard" className='a'><button className="start-button" type="submit">Get Started</button></Link>
+                <Link to='/help-loggedin' className='a'><button className="contact-us" type="submit">Contact us</button></Link>
             </div>
         </div>
      );

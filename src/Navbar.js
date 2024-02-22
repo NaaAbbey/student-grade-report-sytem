@@ -7,7 +7,7 @@ const Navbar = () => {
 			<input type="checkbox" id="show-menu" style={{display: "none"}}/>
 			<nav className="navbar">
 				<Link to="/logged-in"><h3 className='logo'>GradeSOS</h3></Link>
-				<div className='help-logo'><p>?</p></div>
+				<NavLink to='/help-loggedin' className='help-logo'><p>?</p></NavLink>
 				<div className='account'><p>PP</p></div>
 				<div className="menu-icon">
 					<label for="show-menu" style={{backgroundColor: "transparent"}}><img className="navbar-menu" src={menuicon} alt="menu icon" /></label>
@@ -45,6 +45,11 @@ const Navbar = () => {
 							</svg>
 							Grades
 						</NavLink >
+					</div>
+					<div className="li">
+					<NavLink to='/help-loggedin' className='a-help'>
+						<p><span>?</span> Help</p>
+					</NavLink>
 					</div>
 					<div className="sidebar-logout">
 						<NavLink to="/login" className='a'>

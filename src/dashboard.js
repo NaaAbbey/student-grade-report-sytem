@@ -26,24 +26,6 @@ const Dashboard = () => {
                   <tr></tr>
                </table>
             </div>
-            <div className="help-box">
-               <div className="faq"><p> FAQs</p></div>
-               <div className="alert">
-                  <table className="notification">
-                     <tr>
-                        <td><p>Missing grade for STAT 111</p></td>
-                        <td className="report"><Link to="/reportform">Report</Link></td>
-                     <td><Link to="/instructor.js">Contact Instructor</Link></td>
-                     </tr>
-                     <tr>
-                        <td><p>Missing grade for STAT 111</p></td>
-                        <td className="report"><Link to="/reportform">Report</Link></td>
-                     <td><Link to="/instructor.js">Contact Instructor</Link></td>
-                     </tr>
-                     <tr></tr>
-                  </table>
-               </div>
-            </div>
 
 
            </div>

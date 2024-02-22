@@ -1,15 +1,14 @@
-import { NavLink, Link } from 'react-router-dom';
+import Navbar from "./Navbar";
+import Footer from "./Footer";
 import Accordian from "./Accordian "
 import locationIcon from "./icons/location-white.png"
 import mailIcon from "./icons/mail-white.png"
 import phoneIcon from "./icons/icons8-phone-64.png"
 import searchIcon from "./icons/icons8-search-60.png"
-const Help = () => {
+const loggedHelp = () => {
     return ( 
-        <div className="help-page">
-           <nav className="navbar">
-				<Link to="/logged-in"><h3 className='logo'>GradeSOS</h3></Link>
-            </nav>
+        <div className="help-page-loggedin">
+           <Navbar/>
            <div className="body">
                <div className="top">
                   <h4>How can we help you?</h4>
@@ -45,4 +44,4 @@ const Help = () => {
      );
 }
  
-export default Help;
+export default loggedHelp;

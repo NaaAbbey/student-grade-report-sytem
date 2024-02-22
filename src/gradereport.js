@@ -13,7 +13,6 @@ const GradeReport = () => {
            <Navbar/>
            <div className="body">
            <div className="year">
-            
            <button  type="button" className={toggleState === 1 ? "tabs active-tabs" : "tabs"} onClick={() => toggleTab(1)}>
                Level 100
             </button>

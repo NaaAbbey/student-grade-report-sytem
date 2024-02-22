@@ -35,6 +35,7 @@ body {
   background-color: var(--background);
   overflow: auto;
   display: flex; 
+  flex-direction: column ;
 }
 
 .a, nav a {
@@ -344,6 +345,9 @@ nav {
   margin-bottom: 0;
 }
 
+.help-logo:active{
+  background-color: var();
+}
 .head .navbar {
   position: fixed;
 }
@@ -386,6 +390,13 @@ nav {
   text-decoration: none;
 }
 
+.a-help span{
+  position: relative;
+  font-weight: bold;
+  right: 5%;
+  font-size: large;
+}
+
 .li,
 .sidebar-logout {
   position: relative;
@@ -405,9 +416,21 @@ nav {
 }
 
 .sidebar .a:hover,
-.sidebar a.active {
+.help-logo.active,
+.help-logo:hover,
+.sidebar a.active,
+.a-help:hover {
   color: var(--background);
   background-color: var(--other);
+}
+
+.help-logo:hover p, 
+.help-logo.active p, 
+.a:hover p,
+.a:hover span,
+.a-help.active p,
+.a-help.active span {
+  color: var(--background);
 }
 
 .sidebar a.active svg path,
@@ -417,10 +440,14 @@ nav {
 }
 
 .sidebar-icon-white,
-.logout-icon {
+.logout-icon, a.help span {
   position: relative;
   top: -7%;
   left: -7%;
+}
+
+.a-help{
+  display: none;
 }
 
 .intro {
@@ -467,6 +494,7 @@ nav {
   border-bottom: 1px solid var(--theme);
 
 }
+
 .notification a {
   text-decoration: none;
   color: white;
@@ -492,18 +520,7 @@ nav {
   top: 15%;
 }
 
-.help-box{
-  position: relative;
-  bottom: 0;
-}
 
-.faq{
-  position: relative;
-  top: 70px;
-  width: 180px;
-  font-weight: bold;
-  font-size: larger;
-}
 .reportform {
   width: 50vw;
   position: relative;
@@ -535,7 +552,10 @@ nav {
 .reportform .input-box,
 .reportform .compose-box {
   margin-bottom: 5%;
+}
 
+.instructor-page .body{
+  flex-direction: row;
 }
 
 .left {
@@ -637,6 +657,7 @@ nav {
   border-color: white;
   border: solid;
   border-width: 1px;
+  font-weight: lighter;
 }
 
 .compose-box {
@@ -654,10 +675,6 @@ nav {
   left: -5%;
 }
 
-.gradeReport .body, .dashboard .body{
-  flex-direction: column;
-}
-
 .year{
   display: flex;
   position: relative;
@@ -667,8 +684,6 @@ nav {
   height: 50px;
   flex: 1;
 }
-
-
 
 .content{
   margin-top: 20px;
@@ -703,6 +718,7 @@ nav {
 .semester{
   width: 20%;
 }
+
 .grade-report{
   align-items: center;
   border: none;
@@ -730,6 +746,58 @@ nav {
   font-size: larger;
   margin-top: 60px;
 }
+
+.help-page-loggedin{
+  height: 100%;
+}
+
+.top{
+  margin-top: 40px;
+}
+
+.search-bar{
+  margin-top: 20px;
+  width: 50vw;
+  height: 50px;
+  background-color: transparent;
+  border: 1px solid var(--theme);
+  border-radius: 40px;
+}
+
+.search-icon{
+  width: 25px;
+  position: relative;
+  right: 45px;
+  bottom: 3px;
+}
+
+input{
+  outline: none;
+  padding-left: 25px;
+  color: white;
+}
+
+.help-box{
+  position: relative;
+  bottom: 0;
+  margin-bottom: 50px;
+  top: 70px;
+}
+
+.help-box h4{
+  position: relative;
+  width: 200px;
+  font-weight: bold;
+  left: 40%;
+}
+
+.contact{
+  position: relative;
+  height: 100px;
+  top: 5%;
+}
+
+
 .footer {
   background-color: var(--persian-blue);
   width: 100vw;
@@ -738,48 +806,72 @@ nav {
   bottom: 0%;
 }
 
+.mail, .phone{
+  width: 50%;
+  position: relative;
+  left: 45%;
+  bottom: 105%;
+}
+
 .location-icon,
-.mail-icon {
+.mail-icon,
+.phone-icon{
   width: 23px;
   position: relative;
   top: 35px;
-  left: -40vw;
-  display: inline;
+  left: -25%;
 }
 
 .locate {
-  width: 5vw;
-  display: inline;
+  width: 50%;
+  left: 7%;
   position: relative;
-  top: -10px;
-  right: 8vw;
-}
-
-.location p {
-  margin-bottom: 0px;
 }
 
 .location,
 .mail-footer {
   display: block;
   position: relative;
-  width: 250px;
-  left: 12vw;
+  width: 80%;
+  left: 100px;
+}
+
+.contact-header{
+  position: relative;
+  top: 5%;
 }
 
 .school {
   display: block;
 }
 
-.mail-icon {
-  top: 13px;
-  width: 22px;
+.send-icon {
+  width: 15px;
+  position: relative;
+  left: 10vw;
+  top: -13px;
+  cursor: pointer;
 }
 
-.mail-footer {
-  top: -15px;
-  left: 11vw;
+.mail-icon, .phone-icon {
+  width: 22px;
+  top: 25px;
+}
 
+.phone{
+  width: 50%;
+}
+
+.mail-footer{
+  left: 85px;
+}
+
+.help-page .body{
+  margin: 0;
+}
+
+.help-page .contact-header{
+  margin-top: 30px;
 }
 
 .info-footer {
@@ -853,13 +945,7 @@ nav {
   left: -9vw;
 }
 
-.send-icon {
-  width: 15px;
-  position: relative;
-  left: 10vw;
-  top: -13px;
-  cursor: pointer;
-}
+
 
 @media screen and (max-width: 1200px) {
   .body .alert{
@@ -880,6 +966,10 @@ nav {
   }
 }
 
+.locate{
+  left: 0;
+}
+
 @media screen and (max-width: 1030px) {
 
   .help,
@@ -894,6 +984,7 @@ nav {
   .account {
     display: none;
   }
+  
 
   .menu-icon {
     display: flex;
@@ -908,6 +999,9 @@ nav {
     top: -5px;
   }
 
+  .a-help{
+    display: block;
+  }
   .menuIcon,
   .closeIcon {
     width: 30px;
@@ -1036,8 +1130,9 @@ nav {
     }
   }
 
-  .menu {
+  .head #show-menu:not(:checked)~.menu {
     left: -100%;
+    transition: all 0.5s;
   }
 
   .navbar-menu {
@@ -1060,9 +1155,13 @@ nav {
     left: 25%;
   }
 
-  .intro, .faq{
+  .intro{
     position: relative;
-    left: 10%;
+    left: 12%;
+  }
+
+  .help-box h4{
+    left: 3%;
   }
 
   .body .alert{
@@ -1073,31 +1172,6 @@ nav {
   .footer {
     height: 50%;
     z-index: 100;
-  }
-
-  .locate {
-    display: block;
-    left: 33vw;
-  }
-
-  .location-icon {
-    left: -1vw;
-    top: 40px;
-  }
-
-  .location {
-    left: 4.5vw;
-  }
-
-  .mail-icon {
-    width: 22px;
-    left: -0.5vw;
-    top: 10px;
-  }
-
-  .mail-footer {
-    top: -15px;
-    left: 4vw;
   }
 
   .info-footer {
@@ -1161,6 +1235,11 @@ nav {
     height: 60px;
   }
 
+  .login-button:hover{
+    width: 85vw;
+    height: 65px;
+  }
+
   .studentId,
   .pin {
     left: 10vw;
@@ -1168,5 +1247,30 @@ nav {
 
   .forgotpin {
     left: -30vw;
+  }
+
+  .locate{
+    width: 100%;
+  }
+
+  .location-icon{
+    left: -25%;
+  }
+
+  .location{
+    left: 80px;
+  }
+
+  .phone-icon,.mail-icon{
+    left: -30%;
+  }
+
+  .phone, .mail{
+    left: 20%;
+    top: -20%;
+  }
+
+  .phone{
+    left: 27%;
   }
 }

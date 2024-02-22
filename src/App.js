@@ -1,4 +1,5 @@
 import './App.css';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import bootstrap from 'bootstrap'
 import Login from './login';
@@ -7,8 +8,9 @@ import Dashboard from './dashboard';
 import Instructor from './instructor';
 import ReportForm from './reportform';
 import GradeReport from './gradereport';
-import Help from './help';
+import LoggedHelp from './help-loggedin';
 import Logged from './logged-in';
+import Help from './help';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -25,6 +27,7 @@ function App() {
             <Route path='/reportform' element={<ReportForm/>}/>
             <Route path='/instructor' element={<Instructor/>}/>
             <Route path='/help' element={<Help/>}/>
+            <Route path='/help-loggedin' element={<LoggedHelp/>}/>
           </Routes>
         </Router>
         <div className="content">
