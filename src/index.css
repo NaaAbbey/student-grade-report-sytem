@@ -18,6 +18,7 @@ body {
   min-height: 100vh;
   min-width: 100vw;
   background-color: var(--background);
+  margin-top: 85px;
 }
 
 .App {
@@ -464,16 +465,16 @@ nav {
   overflow: hidden;
 }
 
-.body .alert {
+.body .alert, .reference {
   top: 6vh;
-  left: 5vw;
-  width: 74vw;
+  left: 15%;
+  width: 75%;
   padding: 0px;
   margin-bottom: 50px;
   overflow: visible;
 }
 
-.alert .notification {
+.alert .notification, .reference .notification {
   position: relative;
   width: 98%;
   height: 100%;
@@ -487,9 +488,10 @@ nav {
 
 .notification tr {
   height: 50px;
+  
 }
 
-.notification td {
+.notification td, .notification th {
   height: 10px;
   border-bottom: 1px solid var(--theme);
 
@@ -520,6 +522,11 @@ nav {
   top: 15%;
 }
 
+.reference{
+  top: 10%;
+  position: relative;
+  width: 75%;
+}
 
 .reportform {
   width: 50vw;
@@ -554,8 +561,10 @@ nav {
   margin-bottom: 5%;
 }
 
-.instructor-page .body{
+.instructor-page .page{
+  display: flex;
   flex-direction: row;
+  margin-top: 30px;
 }
 
 .left {
@@ -672,7 +681,6 @@ nav {
 
 .submit-button:hover {
   width: 33vw;
-  left: -5%;
 }
 
 .year{
@@ -948,9 +956,11 @@ input{
 
 
 @media screen and (max-width: 1200px) {
-  .body .alert{
-    width: 70vw;
+  .body .alert,.reference{
+    left: 12%;
   }
+
+
   .slogan {
     left: 5vw;
 
@@ -1164,10 +1174,10 @@ input{
     left: 3%;
   }
 
-  .body .alert{
-    position: relative;
-    left: 18%;
-  }
+ .body .alert, .reference{
+  left: 8%;
+  width: 85%;
+ }
 
   .footer {
     height: 50%;

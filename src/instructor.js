@@ -1,11 +1,33 @@
 import Navbar from "./Navbar";
+import { useContext } from "react";
+import {Alert, AlertContext} from "./alert";
+import successIcon from './icons/correct-circle-black-outline-20626.png'
 
 const Instructor = () => {
+   const [,setAlert] = useContext(AlertContext)
+   const showAlert = type =>{
+       setAlert({
+           text: <div style={{
+               display: 'flex',
+               justifyContent: 'center',
+               textAlign: 'left'
+           }}>
+               <img src={successIcon} alt="" style= {{
+                   width: '25px',
+                   marginRight: '20px'
+                 }} />
+                Submitted Successfully </div>,
+           type,
+        })
+   }
+
    return ( 
       <div className="instructor-page">
          <Navbar/> 
          <div className="body">
-            <div className="left">
+         <Alert />
+         <div className="page">
+         <div className="left">
                <div className="page-title"> <h3>Contacts</h3></div>
                <p className="level">Level 100</p>
                <div className="instructor"> 
@@ -44,9 +66,11 @@ const Instructor = () => {
                   <p>Compose message</p>
                   <input className="compose-box" type="text" />
                </div>
-               <button className="submit-button" type="submit">Submit</button>
+               <button className="submit-button" type="button" onClick={() => showAlert('successCustom')}>Submit</button>
             </div>
          </div>
+         </div>
+            
       </div>
    );
 }
