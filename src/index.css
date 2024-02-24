@@ -460,11 +460,6 @@ nav {
   width: 200px;
 }
 
-.dashboard .body{
-  height: 100vh;
-  overflow: hidden;
-}
-
 .body .alert, .reference {
   top: 6vh;
   left: 15%;
@@ -520,6 +515,13 @@ nav {
   width: 25px;
   position: relative;
   top: 15%;
+}
+
+.bar-chart{
+  margin-top: 30px;
+  margin-bottom: 50px;
+  position: relative;
+  left: 20%;
 }
 
 .reference{
@@ -1167,13 +1169,16 @@ input{
 
   .intro{
     position: relative;
-    left: 12%;
+    left: 2%;
   }
 
   .help-box h4{
     left: 3%;
   }
 
+  .bar-chart{
+    left: 0%;
+  }
  .body .alert, .reference{
   left: 8%;
   width: 85%;

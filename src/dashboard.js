@@ -1,8 +1,129 @@
 import Navbar from "./Navbar";
 import { Link } from 'react-router-dom';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import notificationIcon from "./icons/notification-bell-13080.png"
+import { useState } from "react";
 
+
+    const data11 = [
+      {
+         course: "DCIT101",
+         score: 85,
+         GPA: 12,
+       },
+       {
+         course: "DCIT103",
+         score: 79,
+         GPA: 10.5,
+         amt: 3000,
+       },
+       {
+         course: "DCIT103",
+         score: 79,
+         GPA: 10.5,
+         amt: 3000,
+       },
+       {
+         course: "DCIT103",
+         score: 79,
+         GPA: 10.5,
+         amt: 3000,
+       },
+       {
+         course: "DCIT103",
+         score: 79,
+         GPA: 10.5,
+         amt: 3000,
+       },
+       {
+         course: "DCIT103",
+         score: 79,
+         GPA: 10.5,
+         amt: 3000,
+       },
+   ];
+
+   const data12 = [
+      {
+         course: "DCIT101",
+         score: 85,
+         GPA: 12,
+       },
+       {
+         course: "DCIT103",
+         score: 79,
+         GPA: 10.5,
+         amt: 3000,
+       },
+       {
+         course: "DCIT103",
+         score: 79,
+         GPA: 10.5,
+         amt: 3000,
+       },
+       {
+         course: "DCIT103",
+         score: 79,
+         GPA: 10.5,
+         amt: 3000,
+       },
+       {
+         course: "DCIT103",
+         score: 79,
+         GPA: 10.5,
+         amt: 3000,
+       },
+       {
+         course: "DCIT103",
+         score: 79,
+         GPA: 10.5,
+         amt: 3000,
+       },
+   ];
+
+   const data21 = [
+      {
+         course: "DCIT101",
+         score: 85,
+         GPA: 12,
+       },
+       {
+         course: "DCIT103",
+         score: 79,
+         GPA: 10.5,
+         amt: 3000,
+       },
+       {
+         course: "DCIT103",
+         score: 79,
+         GPA: 10.5,
+         amt: 3000,
+       },
+       {
+         course: "DCIT103",
+         score: 79,
+         GPA: 10.5,
+         amt: 3000,
+       },
+       {
+         course: "DCIT103",
+         score: 79,
+         GPA: 10.5,
+         amt: 3000,
+       },
+       {
+         course: "DCIT103",
+         score: 79,
+         GPA: 10.5,
+         amt: 3000,
+       },
+   ];
 const Dashboard = () => {
+
+   const [toggleState, setToggleState] = useState(1);
+   const toggleTab =(index) => {
+      setToggleState(index);
+   }
     return ( 
          <div className="dashboard">
            <Navbar/>
@@ -25,6 +146,115 @@ const Dashboard = () => {
                   </tr>
                   <tr></tr>
                </table>
+            </div>
+            
+            <div className="overview">
+               <h4>Overview of Grades</h4>
+               <div className="year">
+                  <button  type="button" className={toggleState === 1 ? "tabs active-tabs" : "tabs"} onClick={() => toggleTab(1)}>
+                        Level 100
+                     </button>
+                  <button  type="button" className={toggleState === 2 ? "tabs active-tabs" : "tabs"} onClick={() => toggleTab(2)}>
+                        Level 200
+                     </button> 
+                  <button  type="button" className={toggleState === 3 ? "tabs active-tabs" : "tabs"} onClick={() => toggleTab(3)}>
+                        Level 300
+                     </button>
+                  <button  type="button" className={toggleState === 4 ? "tabs active-tabs" : "tabs"} onClick={() => toggleTab(4)}>
+                        Level 400
+                     </button> 
+               </div>
+               <div className={toggleState === 1 ? "content active-content" : "content"}>
+                  <div className="semester-overview">
+                     <p>First Semester</p>
+                     <p><span>CCT:</span>18</p>
+                     <p><span>CGPA:</span>3.89</p>
+                  </div>
+                  <div className="bar-chart">
+                     <BarChart
+                        width={700}
+                        height={300}
+                        data={data11}
+                        margin={{
+                           top: 20,
+                           right: 30,
+                           left: 20,
+                           bottom: 5,
+                        }}
+                     >
+                        <CartesianGrid strokeDasharray="3 3" />
+                        <XAxis dataKey="course" stroke="#FFFFFF"/>
+                        <YAxis yAxisId="left" orientation="left" stroke="#A589DD" />
+                        <YAxis yAxisId="right" orientation="right" stroke="#FFFFFF" />
+                     
+                        <Legend />
+                        <Bar yAxisId="left" dataKey="score" fill="#A589DD" />
+                        <Bar yAxisId="right" dataKey="GPA" fill="#FFFFFF" />
+                     </BarChart>
+                  </div> 
+                  <div className="semester-overview">
+                     <p>Second Semester</p>
+                     <p><span>CCT:</span>18</p>
+                     <p><span>CGPA:</span>3.89</p>
+                  </div>
+                  <div className="bar-chart" >
+                     <BarChart
+                        width={700}
+                        height={300}
+                        data={data12}
+                        margin={{
+                           top: 20,
+                           right: 30,
+                           left: 20,
+                           bottom: 5,
+                        }}
+                     >
+                        <CartesianGrid strokeDasharray="3 3" />
+                        <XAxis dataKey="course" stroke="#FFFFFF"/>
+                        <YAxis yAxisId="left" orientation="left" stroke="#A589DD" />
+                        <YAxis yAxisId="right" orientation="right" stroke="#FFFFFF" />
+                        
+                        <Legend />
+                        <Bar yAxisId="left" dataKey="score" fill="#A589DD" />
+                        <Bar yAxisId="right" dataKey="GPA" fill="#FFFFFF" />
+                     </BarChart> 
+                  </div>
+               </div>
+               <div className={toggleState === 2 ? "content active-content" : "content"}>
+               <div className="semester-overview">
+                     <p>First Semester</p>
+                     <p><span>CCT:</span>18</p>
+                     <p><span>CGPA:</span>3.89</p>
+                  </div>
+                  <div className="bar-chart"> 
+                     <BarChart
+                        width={700}
+                        height={300}
+                        data={data21}
+                        margin={{
+                           top: 20,
+                           right: 30,
+                           left: 20,
+                           bottom: 5,
+                        }}
+                     >
+                        <CartesianGrid strokeDasharray="3 3" />
+                        <XAxis dataKey="course" stroke="#FFFFFF"/>
+                        <YAxis yAxisId="left" orientation="left" stroke="#A589DD" />
+                        <YAxis yAxisId="right" orientation="right" stroke="#FFFFFF" />
+                        
+                        <Legend />
+                        <Bar yAxisId="left" dataKey="score" fill="#A589DD" />
+                        <Bar yAxisId="right" dataKey="GPA" fill="#FFFFFF" />
+                     </BarChart>
+                  </div>
+               </div>
+               <div className={toggleState === 3 ? "content active-content" : "content"}>
+                  <p className="blank">No grade report for this year</p>
+               </div>
+               <div className={toggleState === 4 ? "content active-content" : "content"}>
+                  <p className="blank">No grade report for this year</p>
+               </div>  
             </div>
 
             <div className="reference">
@@ -92,5 +322,5 @@ const Dashboard = () => {
          </div>
      );
 }
- 
+
 export default Dashboard;
