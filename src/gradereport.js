@@ -43,38 +43,32 @@ const GradeReport = () => {
                            <td>A</td>
                         </tr>
                         <tr>
-                           <td>DCIT 101</td>
-                           <td>Introduction to Computer Science</td>
+                           <td>DCIT 103</td>
+                           <td>Introduction to Office Productivity Tools</td>
                            <td>3</td>
-                           <td>A</td>
+                           <td>B+</td>
+                        </tr>
+                        <tr>
+                           <td>MATH 101</td>
+                           <td>Algebra and Trigonometry</td>
+                           <td>3</td>
+                           <td>C+</td>
+                        </tr>
+                        <tr>
+                           <td>MATH 123</td>
+                           <td>Vectors and Geometry</td>
+                           <td>3</td>
+                           <td>B</td>
+                        </tr>
+                        <tr>
+                           <td>STAT 111</td>
+                           <td>Introduction to Statistics</td>
+                           <td>3</td>
+                           <td>N/A</td>
                         </tr>
                         <tr>
                            <td>DCIT 101</td>
-                           <td>Introduction to Computer Science</td>
-                           <td>3</td>
-                           <td>A</td>
-                        </tr>
-                        <tr>
-                           <td>DCIT 101</td>
-                           <td>Introduction to Computer Science</td>
-                           <td>3</td>
-                           <td>A</td>
-                        </tr>
-                        <tr>
-                           <td>DCIT 101</td>
-                           <td>Introduction to Computer Science</td>
-                           <td>3</td>
-                           <td>A</td>
-                        </tr>
-                        <tr>
-                           <td>DCIT 101</td>
-                           <td>Introduction to Computer Science</td>
-                           <td>3</td>
-                           <td>A</td>
-                        </tr>
-                        <tr>
-                           <td>DCIT 101</td>
-                           <td>Introduction to Computer Science</td>
+                           <td>Critical Thinking</td>
                            <td>3</td>
                            <td>A</td>
                         </tr>
@@ -90,46 +84,40 @@ const GradeReport = () => {
                            <td>Grade</td>
                         </tr>
                         <tr>
-                           <td>DCIT 101</td>
-                           <td>Introduction to Computer Science</td>
+                           <td>DCIT 106</td>
+                           <td>Introduction to Computer Hardware</td>
+                           <td>3</td>
+                           <td>B</td>
+                        </tr>
+                        <tr>
+                           <td>DCIT 104</td>
+                           <td>Introduction to Programming Languages</td>
                            <td>3</td>
                            <td>A</td>
                         </tr>
                         <tr>
-                           <td>DCIT 101</td>
-                           <td>Introduction to Computer Science</td>
+                           <td>MATH 126</td>
+                           <td>Algebra and Geometry</td>
+                           <td>3</td>
+                           <td>N/A</td>
+                        </tr>
+                        <tr>
+                           <td>MATH 122</td>
+                           <td>Introduction to Calculus I</td>
+                           <td>3</td>
+                           <td>B+</td>
+                        </tr>
+                        <tr>
+                           <td>LITR 101</td>
+                           <td>Introduction to Literature</td>
                            <td>3</td>
                            <td>A</td>
                         </tr>
                         <tr>
-                           <td>DCIT 101</td>
-                           <td>Introduction to Computer Science</td>
+                           <td>STAT 112</td>
+                           <td>Statistics and Probability</td>
                            <td>3</td>
-                           <td>A</td>
-                        </tr>
-                        <tr>
-                           <td>DCIT 101</td>
-                           <td>Introduction to Computer Science</td>
-                           <td>3</td>
-                           <td>A</td>
-                        </tr>
-                        <tr>
-                           <td>DCIT 101</td>
-                           <td>Introduction to Computer Science</td>
-                           <td>3</td>
-                           <td>A</td>
-                        </tr>
-                        <tr>
-                           <td>DCIT 101</td>
-                           <td>Introduction to Computer Science</td>
-                           <td>3</td>
-                           <td>A</td>
-                        </tr>
-                        <tr>
-                           <td>DCIT 101</td>
-                           <td>Introduction to Computer Science</td>
-                           <td>3</td>
-                           <td>A</td>
+                           <td>B+</td>
                         </tr>
                   </table>
                </div>
@@ -151,40 +139,40 @@ const GradeReport = () => {
                            <td>B+</td>
                         </tr>
                         <tr>
-                           <td>DCIT 101</td>
-                           <td>Introduction to Programming</td>
+                           <td>DCIT 205</td>
+                           <td>Introduction to Web design</td>
+                           <td>3</td>
+                           <td>C+</td>
+                        </tr>
+                        <tr>
+                           <td>LITR 201</td>
+                           <td>Introduction to Literature II</td>
                            <td>3</td>
                            <td>B+</td>
                         </tr>
                         <tr>
-                           <td>DCIT 201</td>
-                           <td>Introduction to Programming</td>
+                           <td>MATH 221</td>
+                           <td>Introduction to Calculus II</td>
+                           <td>3</td>
+                           <td>A</td>
+                        </tr>
+                        <tr>
+                           <td>STAT 229</td>
+                           <td>Introduction to Statistical Computations</td>
+                           <td>3</td>
+                           <td>C</td>
+                        </tr>
+                        <tr>
+                           <td>DCIT 203</td>
+                           <td>Introduction to Hardware II</td>
                            <td>3</td>
                            <td>B+</td>
                         </tr>
                         <tr>
-                           <td>DCIT 201</td>
-                           <td>Introduction to Programming</td>
+                           <td>MATH 227</td>
+                           <td>Vectors and Trigonometry</td>
                            <td>3</td>
-                           <td>B+</td>
-                        </tr>
-                        <tr>
-                           <td>DCIT 201</td>
-                           <td>Introduction to Programming</td>
-                           <td>3</td>
-                           <td>B+</td>
-                        </tr>
-                        <tr>
-                           <td>DCIT 201</td>
-                           <td>Introduction to Programming</td>
-                           <td>3</td>
-                           <td>B+</td>
-                        </tr>
-                        <tr>
-                           <td>DCIT 201</td>
-                           <td>Introduction to Programming</td>
-                           <td>3</td>
-                           <td>B+</td>
+                           <td>B</td>
                         </tr>
                   </table>
                </div>

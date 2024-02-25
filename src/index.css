@@ -19,10 +19,11 @@ body {
   min-width: 100vw;
   background-color: var(--background);
   margin-top: 85px;
+  overflow-x: hidden;
 }
 
 .App {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   margin-top: 0px;
   background-color: var(--background);
@@ -247,6 +248,10 @@ body {
   height: 100vh;
 }
 
+.login input{
+  color: black;
+  font-weight: normal;
+}
 .login h1 {
   color: var(--persian-blue);
   font-weight: bold;
@@ -397,6 +402,10 @@ nav {
   right: 5%;
   font-size: large;
 }
+.a-help p{
+  position: relative;
+  top: -13%;
+}
 
 .li,
 .sidebar-logout {
@@ -425,6 +434,10 @@ nav {
   background-color: var(--other);
 }
 
+.a-help:hover p, .a-help:hover span{
+  color: var(--background);
+}
+
 .help-logo:hover p, 
 .help-logo.active p, 
 .a:hover p,
@@ -440,15 +453,33 @@ nav {
   fill: var(--background);
 }
 
-.sidebar-icon-white,
+.overview-icon, .report-icon, .grades-icon, .instructors-icon,
 .logout-icon, a.help span {
   position: relative;
   top: -7%;
   left: -7%;
 }
 
+.overview-icon{
+  left: -9%;
+}
+
+.report-icon{
+  left: -14%;
+}
+
+.instructors-icon{
+  left: -3%;
+  margin-right: 10px;
+}
+
+.grades-icon{
+  left: -13%;
+}
+
 .a-help{
   display: none;
+  
 }
 
 .intro {
@@ -458,14 +489,17 @@ nav {
 
 .intro p {
   width: 200px;
+  position: relative;
+  left: 10%;
 }
 
 .body .alert, .reference {
   top: 6vh;
-  left: 15%;
+
   width: 75%;
   padding: 0px;
   margin-bottom: 50px;
+  margin: auto;
   overflow: visible;
 }
 
@@ -480,6 +514,7 @@ nav {
   overflow: hidden;
   margin-top: 20px;
 }
+
 
 .notification tr {
   height: 50px;
@@ -517,17 +552,72 @@ nav {
   top: 15%;
 }
 
-.bar-chart{
-  margin-top: 30px;
-  margin-bottom: 50px;
+.overview{
+  margin: 100px auto;
+  width: 90%;
   position: relative;
-  left: 20%;
+  left: 5%;
+}
+
+.overview h4{
+  margin-bottom: 20px;
+  position: relative;
+  
+  width: 90%;
+}
+
+.custom-tooltip{
+  width: 90px;
+  background-color: var(--input-box);
+  
+}
+
+.custom-tooltip .label{
+  font-size: small;
+  margin-bottom: 3px;
+}
+
+.semester-overview{
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 20px;
+}
+
+.semester-overview span{
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.overview .content {
+  border: 1px solid var(--theme);
+  background-color: var(--page);
+  margin: 50px;
+  border-radius: 10px;
+  position: relative;
+  width: 80%;
+}
+
+.bar-chart{
+  margin: 30px auto;
+  margin-left: 20px;
+  position: relative;
+  left: 5%;
 }
 
 .reference{
   top: 10%;
   position: relative;
   width: 75%;
+  margin: 40px auto;
+  left: 0%;
+}
+
+.reference h4{
+  position: relative;
+  left: -3%;
+  margin-bottom: 30px;
 }
 
 .reportform {
@@ -803,10 +893,32 @@ input{
 
 .contact{
   position: relative;
-  height: 100px;
+  height: 110%;
   top: 5%;
+  width: 80%;
+  border: 1px solid var(--theme);
+  border-radius: 20px;
+  margin: auto;
+  padding: 5% 12%;
+  margin-bottom: 10%;
 }
 
+.mail {
+ display: flex;
+ justify-content: space-evenly;
+ margin-top: 5%;
+ width: 70%;
+}
+
+.contact .subject p{
+  margin-top: 5%;
+  position: relative;
+  left: 5%;
+}
+
+.contact .subject input{
+  width: 90%;
+}
 
 .footer {
   background-color: var(--persian-blue);
@@ -816,39 +928,45 @@ input{
   bottom: 0%;
 }
 
-.mail, .phone{
-  width: 50%;
+.phone{
+  width: 100%;
   position: relative;
-  left: 45%;
-  bottom: 105%;
+}
+
+.phone-num{
+  position: relative;
+  left: -20px;
 }
 
 .location-icon,
-.mail-icon,
 .phone-icon{
   width: 23px;
   position: relative;
   top: 35px;
-  left: -25%;
+  left: -130px;
 }
 
 .locate {
-  width: 50%;
-  left: 7%;
+  width: 100%;
   position: relative;
+  right: 5%;
+  top: 20px;
 }
 
-.location,
-.mail-footer {
+.location {
   display: block;
   position: relative;
   width: 80%;
-  left: 100px;
+  left: 15%;
 }
 
 .contact-header{
   position: relative;
   top: 5%;
+}
+
+.contact .submit-button{
+  margin-bottom: 20px;
 }
 
 .school {
@@ -863,25 +981,54 @@ input{
   cursor: pointer;
 }
 
-.mail-icon, .phone-icon {
+.phone-icon {
   width: 22px;
   top: 25px;
-}
-
-.phone{
-  width: 50%;
 }
 
 .mail-footer{
   left: 85px;
 }
 
+.help-page{
+  background-color: var(--background);
+  padding-bottom: 5px;
+}
+
 .help-page .body{
   margin: 0;
+  height: 100%;
+}
+
+.help-page .contact{
+  margin-bottom: 5%;
 }
 
 .help-page .contact-header{
-  margin-top: 30px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.socials{
+  position: relative;
+  top: 25px;
+}
+
+.socials p{
+  position: relative;
+  top: 43px;
+  right: 120px;
+}
+
+.icon, .linkedIn-icon {
+  width: 20px;
+  margin-left: 12px;
+  cursor: pointer;
+}
+
+.linkedIn-icon{
+  width: 25px;
+  margin-bottom: 5px;
 }
 
 .info-footer {
@@ -901,22 +1048,9 @@ input{
   cursor: pointer;
 }
 
-.socials {
-  position: relative;
-  top: -195px;
-  left: 55vw;
-  width: 200px;
-}
 
-.socials p {
-  margin-bottom: 3px;
-}
 
-.icon {
-  width: 20px;
-  margin-left: 12px;
-  cursor: pointer;
-}
+
 
 .subscription {
   width: 30vw;
@@ -958,8 +1092,8 @@ input{
 
 
 @media screen and (max-width: 1200px) {
-  .body .alert,.reference{
-    left: 12%;
+  .bar-chart{
+    left: -7%;
   }
 
 
@@ -976,10 +1110,21 @@ input{
   .sign-in {
     left: 20vw;
   }
-}
 
-.locate{
-  left: 0;
+  .locate{
+    left: 0px;
+    width: 100%;
+  }
+
+  .phone{
+    width: 100%;
+    left: 30px;
+  }
+
+  .socials {
+    width: 100%;
+    top: 20px;
+  }
 }
 
 @media screen and (max-width: 1030px) {
@@ -1013,6 +1158,11 @@ input{
 
   .a-help{
     display: block;
+  }
+
+  .a-help span{
+    position: relative;
+    left: -15%;
   }
   .menuIcon,
   .closeIcon {
@@ -1169,7 +1319,7 @@ input{
 
   .intro{
     position: relative;
-    left: 2%;
+    left: -10%;
   }
 
   .help-box h4{
@@ -1178,12 +1328,32 @@ input{
 
   .bar-chart{
     left: 0%;
+    margin-left: 0px;
   }
+
+  .overview .content{
+    width: 90%;
+  }
+
  .body .alert, .reference{
   left: 8%;
   width: 85%;
  }
 
+  .reference{
+    left: 0%;
+  }
+
+  .contact{
+    margin-top: 20px;
+    margin-bottom: 100px;
+  }
+
+  .mail{
+    width: 100%;
+    margin-bottom: 10%;
+    margin-top: 10%;
+  }
   .footer {
     height: 50%;
     z-index: 100;
@@ -1223,8 +1393,7 @@ input{
   }
 
   .socials {
-    top: 40px;
-    left: 41vw;
+    top: 20px;
   }
 
 }
@@ -1236,6 +1405,14 @@ input{
 
   .login-img {
     display: none;
+  }
+
+  .overview{
+    width: 100%;
+  }
+
+  .bar-chart{
+    left: -5%;
   }
 
   .login {
@@ -1266,26 +1443,14 @@ input{
 
   .locate{
     width: 100%;
-  }
-
-  .location-icon{
-    left: -25%;
-  }
-
-  .location{
-    left: 80px;
-  }
-
-  .phone-icon,.mail-icon{
-    left: -30%;
-  }
-
-  .phone, .mail{
-    left: 20%;
-    top: -20%;
+    left: 0px;
   }
 
   .phone{
-    left: 27%;
+    top: -20%;
+  }
+
+  .socials{
+    left: 10%;
   }
 }

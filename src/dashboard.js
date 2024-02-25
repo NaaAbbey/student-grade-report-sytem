@@ -1,124 +1,128 @@
 import Navbar from "./Navbar";
 import { Link } from 'react-router-dom';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
 import notificationIcon from "./icons/notification-bell-13080.png"
 import { useState } from "react";
 
+const data11 = [
+{
+   course: "DCIT 101",
+   score: 85,
+   GPA: 12.0,
+   },
+   {
+   course: "DCIT 103",
+   score: 79,
+   GPA: 10.5,
+   },
+   {
+   course: "MATH 101",
+   score: 68,
+   GPA: 7.5,
+   },
+   {
+   course: "MATH 123",
+   score: 72,
+   GPA: 9.0,
+   },
+   {
+   course: "STAT 111",
+   score: 0,
+   GPA: 0,
+   },
+   {
+   course: "CRTK 101",
+   score: 90,
+   GPA: 12.0,
+   },
+];
 
-    const data11 = [
-      {
-         course: "DCIT101",
-         score: 85,
-         GPA: 12,
-       },
-       {
-         course: "DCIT103",
-         score: 79,
-         GPA: 10.5,
-         amt: 3000,
-       },
-       {
-         course: "DCIT103",
-         score: 79,
-         GPA: 10.5,
-         amt: 3000,
-       },
-       {
-         course: "DCIT103",
-         score: 79,
-         GPA: 10.5,
-         amt: 3000,
-       },
-       {
-         course: "DCIT103",
-         score: 79,
-         GPA: 10.5,
-         amt: 3000,
-       },
-       {
-         course: "DCIT103",
-         score: 79,
-         GPA: 10.5,
-         amt: 3000,
-       },
-   ];
+const data12 = [
+{
+   course: "DCIT106",
+   score: 73,
+   GPA: 9.0,
+   },
+   {
+   course: "DCIT104",
+   score: 92,
+   GPA: 12.0,
+   },
+   {
+   course: "MATH 126",
+   score: 0,
+   GPA: 0,
+   },
+   {
+   course: "MATH 122",
+   score: 77,
+   GPA: 10.5,
+   },
+   {
+   course: "LITR 101",
+   score: 89,
+   GPA: 12.0,
+   },
+   {
+   course: "STAT 112",
+   score: 79,
+   GPA: 10.5,
+   },
+];
 
-   const data12 = [
-      {
-         course: "DCIT101",
-         score: 85,
-         GPA: 12,
-       },
-       {
-         course: "DCIT103",
-         score: 79,
-         GPA: 10.5,
-         amt: 3000,
-       },
-       {
-         course: "DCIT103",
-         score: 79,
-         GPA: 10.5,
-         amt: 3000,
-       },
-       {
-         course: "DCIT103",
-         score: 79,
-         GPA: 10.5,
-         amt: 3000,
-       },
-       {
-         course: "DCIT103",
-         score: 79,
-         GPA: 10.5,
-         amt: 3000,
-       },
-       {
-         course: "DCIT103",
-         score: 79,
-         GPA: 10.5,
-         amt: 3000,
-       },
-   ];
+const data21 = [
+{
+   course: "DCIT201",
+   score: 78,
+   GPA: 10.5,
+   },
+   {
+   course: "DCIT105",
+   score: 67,
+   GPA: 7.5,
+   },
+   {
+   course: "LITR 201",
+   score: 76,
+   GPA: 10.5,
+   },
+   {
+   course: "MATH 221",
+   score: 84,
+   GPA: 12.0,
+   },
+   {
+   course: "STAT 229",
+   score: 63,
+   GPA: 6.0,
+   },
+   {
+   course: "DCIT203",
+   score: 78,
+   GPA: 10.5,
+   },
+   {
+      course: "MATH 227",
+      score: 72,
+      GPA: 9.0,
+      },
+];
 
-   const data21 = [
-      {
-         course: "DCIT101",
-         score: 85,
-         GPA: 12,
-       },
-       {
-         course: "DCIT103",
-         score: 79,
-         GPA: 10.5,
-         amt: 3000,
-       },
-       {
-         course: "DCIT103",
-         score: 79,
-         GPA: 10.5,
-         amt: 3000,
-       },
-       {
-         course: "DCIT103",
-         score: 79,
-         GPA: 10.5,
-         amt: 3000,
-       },
-       {
-         course: "DCIT103",
-         score: 79,
-         GPA: 10.5,
-         amt: 3000,
-       },
-       {
-         course: "DCIT103",
-         score: 79,
-         GPA: 10.5,
-         amt: 3000,
-       },
-   ];
+const CustomTooltip = ({ active, payload, label }) => {
+if (active && payload && payload.length) {
+   return (
+      <div className="custom-tooltip">
+      <p style={{color:'#A589DD'}} className="label">{`Score : ${payload[0].value}`}</p>
+      <p className="label">{`GPA : ${payload[1].value}`}</p>
+      </div>
+   );
+   
+}
+return null;
+}
+
 const Dashboard = () => {
+   
 
    const [toggleState, setToggleState] = useState(1);
    const toggleTab =(index) => {
@@ -140,7 +144,7 @@ const Dashboard = () => {
                     <td><Link to="/instructor.js">Contact Instructor</Link></td>
                   </tr>
                   <tr>
-                     <td><p>Missing grade for STAT 111</p></td>
+                     <td><p>Missing grade for MATH 126</p></td>
                      <td className="report"><Link to="/reportform">Report</Link></td>
                     <td><Link to="/instructor.js">Contact Instructor</Link></td>
                   </tr>
@@ -162,13 +166,13 @@ const Dashboard = () => {
                      </button>
                   <button  type="button" className={toggleState === 4 ? "tabs active-tabs" : "tabs"} onClick={() => toggleTab(4)}>
                         Level 400
-                     </button> 
+                  </button> 
                </div>
-               <div className={toggleState === 1 ? "content active-content" : "content"}>
+               <div  className={toggleState === 1 ? "content active-content" : "content"}>
                   <div className="semester-overview">
                      <p>First Semester</p>
                      <p><span>CCT:</span>18</p>
-                     <p><span>CGPA:</span>3.89</p>
+                     <p><span>CGPA:</span>3.42</p>
                   </div>
                   <div className="bar-chart">
                      <BarChart
@@ -186,7 +190,7 @@ const Dashboard = () => {
                         <XAxis dataKey="course" stroke="#FFFFFF"/>
                         <YAxis yAxisId="left" orientation="left" stroke="#A589DD" />
                         <YAxis yAxisId="right" orientation="right" stroke="#FFFFFF" />
-                     
+                        <Tooltip content={<CustomTooltip />} />
                         <Legend />
                         <Bar yAxisId="left" dataKey="score" fill="#A589DD" />
                         <Bar yAxisId="right" dataKey="GPA" fill="#FFFFFF" />
@@ -195,7 +199,7 @@ const Dashboard = () => {
                   <div className="semester-overview">
                      <p>Second Semester</p>
                      <p><span>CCT:</span>18</p>
-                     <p><span>CGPA:</span>3.89</p>
+                     <p><span>CGPA:</span>3.78</p>
                   </div>
                   <div className="bar-chart" >
                      <BarChart
@@ -213,18 +217,18 @@ const Dashboard = () => {
                         <XAxis dataKey="course" stroke="#FFFFFF"/>
                         <YAxis yAxisId="left" orientation="left" stroke="#A589DD" />
                         <YAxis yAxisId="right" orientation="right" stroke="#FFFFFF" />
-                        
+                        <Tooltip content={<CustomTooltip />} />
                         <Legend />
                         <Bar yAxisId="left" dataKey="score" fill="#A589DD" />
                         <Bar yAxisId="right" dataKey="GPA" fill="#FFFFFF" />
                      </BarChart> 
                   </div>
                </div>
-               <div className={toggleState === 2 ? "content active-content" : "content"}>
+               <div className={toggleState === 2 ? "content active-content" : "content"} >
                <div className="semester-overview">
                      <p>First Semester</p>
-                     <p><span>CCT:</span>18</p>
-                     <p><span>CGPA:</span>3.89</p>
+                     <p><span>CCT: </span>21</p>
+                     <p><span>CGPA: </span>3.0</p>
                   </div>
                   <div className="bar-chart"> 
                      <BarChart
@@ -242,7 +246,7 @@ const Dashboard = () => {
                         <XAxis dataKey="course" stroke="#FFFFFF"/>
                         <YAxis yAxisId="left" orientation="left" stroke="#A589DD" />
                         <YAxis yAxisId="right" orientation="right" stroke="#FFFFFF" />
-                        
+                        <Tooltip content={<CustomTooltip />} />
                         <Legend />
                         <Bar yAxisId="left" dataKey="score" fill="#A589DD" />
                         <Bar yAxisId="right" dataKey="GPA" fill="#FFFFFF" />
@@ -258,6 +262,7 @@ const Dashboard = () => {
             </div>
 
             <div className="reference">
+               <h4>Grade Reference Table</h4>
             <table className="notification"> 
             <tr>
                <th>Score</th>

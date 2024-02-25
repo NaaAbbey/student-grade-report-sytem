@@ -12,6 +12,7 @@ const Accordian = () => {
         setSelected(i);
     }
 
+    
    
   return (
     <div className='container'>
@@ -44,21 +45,21 @@ const Accordian = () => {
 
 const data  =[
     {
-        Question: 'Is there a free trial',
+        Question: 'Is there a free trial?',
         Answer: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi quidem, fuga saepe nam est odit accusantium repellat rerum quis beatae sed amet distinctio aspernatur adipisci quoperspiciatis cupiditate assumenda exercitationem?"
     },
     {
-        Question: 'Is there a free trial',
+        Question: 'What does CCT mean?',
         Answer: 
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi quidem, fuga saepe nam est odit accusantium repellat rerum quis beatae sed amet distinctio aspernatur adipisci quoperspiciatis cupiditate assumenda exercitationem?"
+        "CCT stands for the Cummulative Credits Taken"
     },
     {
-        Question: 'Is there a free trial',
+        Question: 'What does CGPA mean?',
         Answer: 
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi quidem, fuga saepe nam est odit accusantium repellat rerum quis beatae sed amet distinctio aspernatur adipisci quoperspiciatis cupiditate assumenda exercitationem?"
+        "CGPA stands for the Cummulative Grade Point Average"
     },
     {
-        Question: 'Is there a free trial',
+        Question: 'Is there a free trial?',
         Answer: 
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi quidem, fuga saepe nam est odit accusantium repellat rerum quis beatae sed amet distinctio aspernatur adipisci quoperspiciatis cupiditate assumenda exercitationem?"
     }
