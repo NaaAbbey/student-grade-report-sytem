@@ -144,9 +144,10 @@ body {
   background-color: transparent;
   width: 80vw;
   height: 50px;
-  display: inline-flex;
+ 
   position: relative;
-  left: 13vw;
+ 
+  margin: auto;
   top: 10%;
 }
 
@@ -164,6 +165,7 @@ body {
   position: relative;
   top: 1vh;
   left: 2vw;
+  margin-bottom: 10px;
 }
 
 .start-button,
@@ -172,6 +174,7 @@ body {
   border: none;
   width: 200px;
   height: 45px;
+  margin: auto;
   position: relative;
   top: 3vh;
 }
@@ -860,12 +863,13 @@ nav {
 }
 
 .top{
+  margin: auto;
   margin-top: 40px;
 }
 
 .search-bar{
   margin-top: 20px;
-  width: 50vw;
+  width: 53vw;
   height: 50px;
   background-color: transparent;
   border: 1px solid var(--theme);
@@ -894,9 +898,10 @@ input{
 
 .help-box h4{
   position: relative;
-  width: 200px;
+  width: 55%;
   font-weight: bold;
-  left: 40%;
+  margin: auto;
+  text-align: left;
 }
 
 .contact{
@@ -1204,7 +1209,7 @@ input{
     display: flex;
     align-content: center;
     position: relative;
-    left: 13%;
+    left: 0%;
     top: 10;
   }
 
@@ -1219,7 +1224,7 @@ input{
     width: 45vw;
     height: 50px;
     top: -3vh;
-    left: 30%;
+    left: 0%;
     display: block;
     margin-bottom: 2vh;
     text-decoration: none;
@@ -1321,10 +1326,6 @@ input{
   .intro{
     position: relative;
     left: -10%;
-  }
-
-  .help-box h4{
-    left: 3%;
   }
 
   .bar-chart{
@@ -1520,6 +1521,10 @@ input{
 }
 
 @media screen and (max-width: 435px){
+  .slogan{
+    left: 0%;
+    margin-bottom: 0px;
+  }
   .notification-title{
     width: 80%;
     margin-left: 20px;
