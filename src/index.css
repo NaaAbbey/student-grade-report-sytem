@@ -81,7 +81,7 @@ body {
   height: 20px;
   padding: 12px;
   position: relative;
-  left: 10vw;
+  left: 12vw;
 }
 
 .sign-in {
@@ -532,8 +532,8 @@ nav {
   color: white;
 }
 
-.notification p {
-  margin: 0px;
+.notification-title {
+  margin-bottom: 0px;
 }
 
 .notification-bell{
@@ -556,7 +556,7 @@ nav {
   margin: 100px auto;
   width: 90%;
   position: relative;
-  left: 5%;
+ 
 }
 
 .overview h4{
@@ -593,9 +593,10 @@ nav {
 .overview .content {
   border: 1px solid var(--theme);
   background-color: var(--page);
-  margin: 50px;
+  margin: auto;
   border-radius: 10px;
   position: relative;
+  margin-top: 20px;
   width: 80%;
 }
 
@@ -610,8 +611,9 @@ nav {
   top: 10%;
   position: relative;
   width: 75%;
-  margin: 40px auto;
+  margin: auto;
   left: 0%;
+  margin-bottom: 30px;
 }
 
 .reference h4{
@@ -636,7 +638,6 @@ nav {
 
 .reportform .submit-button {
   top: 0%;
-  margin-top: 0px;
   margin-bottom: 5%;
 }
 
@@ -645,7 +646,10 @@ nav {
 }
 
 .reportform p {
-  width: 60%;
+  width: 50%;
+  margin: auto;
+  text-align: left;
+  margin-bottom: 8px;
 }
 
 .reportform .input-box,
@@ -668,8 +672,9 @@ nav {
 }
 
 .page-title {
-  width: 170px;
-  margin-left: 30px;
+  width: 360px;
+  position: relative;
+  left: 10%;
 }
 
 .page-title h3 {
@@ -707,19 +712,16 @@ nav {
   font-weight: bold;
 }
 
-.instructor-name,
-.course {
-  width: 15vw;
+.instructor-name, .course {
+  text-align: left;
   position: relative;
-  left: 50px;
-  top: -4vh;
-  margin-bottom: 0px;
-}
-
-.course {
-  left: 15px;
   font-weight: lighter;
+  margin: auto;
+  top: -4vh;
+  left: 0px;
+  width: 70%;
   font-size: small;
+  margin-top: 10px;
 }
 
 .right {
@@ -749,12 +751,15 @@ nav {
 }
 
 .subject p {
-  width: 180px;
+  margin: auto;
+  text-align: left;
+  margin-bottom: 15px;
+  width: 90%;
 }
 
 .input-box,
 .compose-box {
-  width: 30vw;
+  width: 120%;
   border-color: white;
   border: solid;
   border-width: 1px;
@@ -767,12 +772,15 @@ nav {
 
 .submit-button {
   position: relative;
-  top: 5%;
-  width: 30vw;
+  top: 15%;
+  width: 85%;
+  left: 8%;
+  margin: auto;
 }
 
 .submit-button:hover {
-  width: 33vw;
+  width: 90%;
+  cursor: pointer;
 }
 
 .year{
@@ -901,6 +909,8 @@ input{
   margin: auto;
   padding: 5% 12%;
   margin-bottom: 10%;
+  max-width: 60vw;
+  margin-top: 1%;
 }
 
 .mail {
@@ -1006,7 +1016,7 @@ input{
 
 .help-page .contact-header{
   margin-top: 50px;
-  margin-bottom: 30px;
+  margin-bottom: 7%;
 }
 
 .socials{
@@ -1047,10 +1057,6 @@ input{
   margin-right: 10px;
   cursor: pointer;
 }
-
-
-
-
 
 .subscription {
   width: 30vw;
@@ -1099,7 +1105,6 @@ input{
 
   .slogan {
     left: 5vw;
-
   }
 
   .info-footer {
@@ -1313,10 +1318,6 @@ input{
     margin-left: 0px;
   }
 
-  .reportform{
-    left: 25%;
-  }
-
   .intro{
     position: relative;
     left: -10%;
@@ -1336,19 +1337,39 @@ input{
   }
 
  .body .alert, .reference{
-  left: 8%;
-  width: 85%;
+  margin: auto;
+  width: 80%;
+  margin-bottom: 40px;
  }
 
   .reference{
     left: 0%;
   }
 
+  .input-box, .compose-box{
+    width: 60vw;
+    margin-bottom: 35px;
+  }
+
+  .course{
+    width: 60%;
+  }
   .contact{
     margin-top: 20px;
     margin-bottom: 100px;
   }
 
+  .reportform p{
+    width: 80%;
+  }
+
+  .submit-button{
+    left: 0%;
+    margin: auto;
+    top: 12%;
+    margin-top: 20px;
+  }
+  
   .mail{
     width: 100%;
     margin-bottom: 10%;
@@ -1394,6 +1415,11 @@ input{
 
   .socials {
     top: 20px;
+    left: 15%;
+  }
+
+  .contact .submit-button{
+    left: 0%;
   }
 
 }
@@ -1421,6 +1447,14 @@ input{
     left: 0;
   }
 
+  .login form{
+    top: 0px;
+  }
+
+  .login form h1{
+    font-size: 39px;
+  }
+
   .login .name,
   .login-button {
     width: 80vw;
@@ -1432,6 +1466,30 @@ input{
     height: 65px;
   }
 
+  .reportform {
+    position: relative;
+    left: 0%;
+    width: 80vw;
+    margin: auto;
+  }
+
+  .reportform h4{
+    width: 100%;
+    position: relative;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .reportform .submit-button{
+    left: 0%;
+  }
+
+  
+  .reportform .input-box, .reportform .compose-box{
+    margin: auto;
+    margin-bottom: 10px;
+  }
+
   .studentId,
   .pin {
     left: 10vw;
@@ -1441,6 +1499,12 @@ input{
     left: -30vw;
   }
 
+  .contact{
+    max-width: 95%;
+    height: 150%;
+  }
+
+  
   .locate{
     width: 100%;
     left: 0px;
@@ -1453,4 +1517,76 @@ input{
   .socials{
     left: 10%;
   }
+}
+
+@media screen and (max-width: 435px){
+  .notification-title{
+    width: 80%;
+    margin-left: 20px;
+  }
+  .reportform p{
+    width: 70%;
+  }
+
+  .reportform .input-box, .reportform .compose-box{
+    margin-bottom: 25px;
+  }
+
+  .mail h6{
+    margin-right: 10px;
+
+  }
+
+  .socials{
+    margin-bottom: 30px;
+    left: 20%;
+  }
+
+  .location-icon{
+    left: -55%;
+  }
+
+  .help-box h4{
+    left: -8%;
+  }
+
+  .instructor-page .page{
+    display: none;
+  }
+
+  .instructors-mobile{
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+  }
+
+  .instructor{
+    width: 100%;
+    height: 90%;
+    margin: 0px;
+    border: none;
+    top: 0px;
+    left: 5px;
+    margin-top: 5%;
+  }
+
+  .instructor-name{
+    width: 100%;
+    top: -40px;
+    left: 18%;
+  }
+
+  .course{
+    position: relative;
+    left: 18%;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .page-title{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    left: 3%;
+  }
+
 }

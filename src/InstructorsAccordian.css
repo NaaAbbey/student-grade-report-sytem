@@ -1,0 +1,122 @@
+:root{
+    --theme: #A589DD;
+}
+
+.instructors-container{
+    position: relative;
+    overflow: visible;
+    padding-bottom: 20px;
+    width: 100%;
+    max-width: 87vw;
+    z-index: 50;
+    height: auto;
+    margin: auto;
+}
+
+.instructors-faq-table{
+  position: relative;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--theme);
+  border-spacing: 0;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: auto;
+  margin-top: 20px;
+  
+  border-collapse: separate;
+  text-align: left;
+}
+
+
+.instructor-item{
+    border-bottom: 1px solid var(--theme);
+    padding: 10px;
+    height: 13%;
+}
+
+.title{
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    height: 80%;
+    min-height: 70px;
+}
+
+h6{ 
+    width: 100%;
+}
+
+.open-icon {
+   padding-right: 10px;
+}
+
+.open-icon svg{
+    width: 18px;
+}
+
+.accordain-content{
+    margin-top: 10px;
+    max-height: 0;
+    padding-top: 5px;
+    overflow: hidden;
+    transition: all 0.1s ease-in-out;
+}
+
+.accordain-content .show{
+    height: auto;
+    max-height: 999px;
+    transition: all 0.5s ease-in-out;
+}
+
+
+.initials{
+    padding-left: 10px;
+    padding-top: 10px;
+    position: relative; 
+}
+
+.message{
+    background-color: var(--page);
+    height: 90%;
+    padding: 6% 5%;
+    position: relative;
+    margin-top: 40px;
+    width: 100%;
+}
+
+.message .input-box,.message .compose-box{
+    margin: 20px 25px;
+    margin-top: 10px;
+    width: 80%;
+}
+
+.message .subject p{
+    margin: auto;
+    text-align: left;
+    width: 80%;
+}
+.level{
+    position: relative;
+    top: 1%;
+    width: 85%;
+    margin: auto;
+    left: 0%;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.message .submit-button{
+    position: relative;
+    top: 5%;
+    width: 30vw;
+    left: 28%;
+}
+.message .lecturer{
+    position: relative;
+    left: 8%;
+}
+
+.message .level{
+    position: relative;
+}

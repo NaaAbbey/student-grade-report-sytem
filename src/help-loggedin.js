@@ -36,7 +36,7 @@ const LoggedHelp = () => {
            <Alert />
                <div className="top">
                   <h4>How can we help you?</h4>
-                  <input className="search-bar" type="text" placeholder="Enter keyword or question"/>
+                  <input className="search-bar" type="text" placeholder="Search"/>
                   <img className="search-icon" src={searchIcon} alt="search icon" />
                </div>
                <div className="help-box">

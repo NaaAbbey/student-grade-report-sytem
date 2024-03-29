@@ -123,7 +123,7 @@ return null;
 
 const Dashboard = () => {
    
-
+   var width = 500
    const [toggleState, setToggleState] = useState(1);
    const toggleTab =(index) => {
       setToggleState(index);
@@ -139,12 +139,12 @@ const Dashboard = () => {
                </div>
                <table className="notification">
                   <tr>
-                     <td><p>Missing grade for STAT 111</p></td>
+                     <td><p className="notification-title">Missing grade for STAT 111</p></td>
                      <td className="report"><Link to="/reportform">Report</Link></td>
                     <td><Link to="/instructor.js">Contact Instructor</Link></td>
                   </tr>
                   <tr>
-                     <td><p>Missing grade for MATH 126</p></td>
+                     <td><p className="notification-title">Missing grade for MATH 126</p></td>
                      <td className="report"><Link to="/reportform">Report</Link></td>
                     <td><Link to="/instructor.js">Contact Instructor</Link></td>
                   </tr>
@@ -174,9 +174,10 @@ const Dashboard = () => {
                      <p><span>CCT:</span>18</p>
                      <p><span>CGPA:</span>3.42</p>
                   </div>
+                  
                   <div className="bar-chart">
                      <BarChart
-                        width={700}
+                        width= {500}
                         height={300}
                         data={data11}
                         margin={{
